@@ -19,9 +19,8 @@ body {
   display: flex;
   gap: 40px;
 
-  /* background-color: #2c2c2c; */
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   background-image: url("../Images/texture.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +66,7 @@ body {
 .nav-links {
   display: flex;
   gap: 4rem;
-  background-color: #2c2c2c;
+  /* background-color: #2c2c2c73; */
   padding: 1rem;
   border-radius: 38px;
   align-items: center;
@@ -75,12 +74,20 @@ body {
 }
 
 .nav-links a {
-  color: #f8f5f0;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 10px;
 }
 
 .nav-links a:hover {
-  color: #ffff00;
+  background-color: #707070cd;
+  color: #3b1c65;
+  transition: background-color 0.2s ease;
 }
 
 .introduction {
