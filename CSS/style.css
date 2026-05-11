@@ -11,6 +11,9 @@ body {
   /* height: 100vh; */
   min-height: 100vh;
 }
+/*========================================/
+/*=====Navigation, Heading and body======*/
+/*=======================================*/
 
 #navigation {
   display: flex;
@@ -24,11 +27,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/* h1,
-.tagline {
-  text-align: center;
-} */
 
 .hero-title-tag {
   text-align: center;
@@ -54,7 +52,7 @@ body {
   margin-left: 19rem;
 }
 
-.image {
+.home-image-icon {
   margin-top: 10px;
 }
 
@@ -132,4 +130,85 @@ body {
   background-color: #1c1c1c;
   padding: 0.5rem;
   margin-top: auto;
+}
+
+/*=====================================*/
+/*==Contact Form Page Section==========*/
+/*=====================================*/
+
+.contact-image-icon {
+  margin-top: 10px;
+}
+
+p,
+.contact-heading {
+  text-align: center;
+}
+
+.contact-paragraph,
+.closure {
+  font-size: 19px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-heading {
+  transform: translateY(-40px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+#contact-section {
+  transform: translateY(-17px);
+  background-color: #2c2c2c;
+  width: 15rem;
+  margin: 0 auto;
+  padding: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input-name,
+#input-email,
+#input-message {
+  border: none;
+  border-radius: 8px;
+  min-height: 40px;
+  padding: 10px;
+  width: 400px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea {
+  width: 200px;
+  height: 80px;
+  resize: none;
+}
+
+button[type="submit"] {
+  align-self: center;
+  padding: 10px;
+  cursor: pointer;
+  width: 120px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #8d8c8c;
+  transition: background-color 0.2s ease;
 }
