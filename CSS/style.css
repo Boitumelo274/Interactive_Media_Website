@@ -51,8 +51,14 @@ body {
   margin-left: 19rem;
 }
 
-.home-image-icon {
+.home-image-icon,
+.contact-image-icon,
+.music-image-icon,
+.info-image-icon {
   margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
 }
 
 .title {
@@ -139,9 +145,9 @@ body {
   margin-top: auto;
 }
 
-/*=====================================*/
-/*==Contact Form Page Section==========*/
-/*=====================================*/
+/*=============================================*/
+/*==Contact Form Page Section Styling==========*/
+/*=============================================*/
 
 .contact-image-icon {
   margin-top: 10px;
@@ -219,3 +225,7 @@ button[type="submit"]:hover {
   background-color: #8d8c8c;
   transition: background-color 0.2s ease;
 }
+
+/*============================================*/
+/*========About Me Page section Styling=======*/
+/*============================================*/
