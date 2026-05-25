@@ -39,6 +39,10 @@ body {
   gap: 15px;
 }
 
+.tagline {
+  font-size: larger;
+}
+
 .title {
   cursor: pointer;
 }
@@ -130,6 +134,7 @@ body {
   margin-left: 5rem;
   margin-top: 2rem;
   font-size: larger;
+  text-align: center;
 }
 
 .extra-info a {
