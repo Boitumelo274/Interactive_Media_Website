@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #f8f5f0;
+  display: grid;
+  min-height: 100vh;
+}
+/*========================================/
+/*=====Navigation, Heading and body======*/
+/*=======================================*/
+
+/* #navigation {
+  display: flex;
+  gap: 40px;
+
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  background-image: url("../Images/texture.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.top-nav {
+  height: 5rem;
+  background-color: #1c1c1c;
+}
+
+.hero-title-tag {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title {
+  cursor: pointer;
+}
+
+.home {
+  display: flex;
+  gap: 19rem;
+  margin-top: 12px;
+}
+
+.image-nav {
+  display: flex;
+  gap: 1rem;
+  margin-left: 19rem;
+}
+
+.home-image-icon,
+.contact-image-icon,
+.music-image-icon,
+.info-image-icon {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  /* border-radius: 38px; */
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  padding: 1rem;
+  border-radius: 38px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  background-color: #707070cd;
+  color: #3b1c65;
+  transition: background-color 0.2s ease;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero-image {
+  height: 250px;
+  width: 420px;
+  margin-left: 5rem;
+  border-radius: 8px;
+}
+
+.intro-paragraph {
+  padding: 0.1rem;
+
+  height: 50%;
+  width: 50%;
+  font-size: large;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.extra-info {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  font-size: larger;
+}
+
+.extra-info a {
+  color: white;
+}
+
+.extra-info a:hover {
+  color: #ffff00;
+}
+
+.footer {
+  text-align: center;
+  background-color: #1c1c1c;
+  padding: 0.5rem;
+  margin-top: auto;
+}
