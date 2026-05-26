@@ -90,18 +90,23 @@ body {
 .nav-links a {
   color: white;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   background-color: transparent;
   padding: 3px;
   border-radius: 10px;
+  border-bottom: 5px solid transparent;
 }
 
 .nav-links a:hover {
-  background-color: #707070cd;
-  color: #3b1c65;
+  border-bottom: 5px solid #3b1c65;
   transition: background-color 0.2s ease;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  border-bottom: 5px solid #3b1c65;
 }
 
 .introduction {

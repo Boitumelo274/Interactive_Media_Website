@@ -62,7 +62,6 @@ h2 {
 #input-name,
 #input-email,
 #input-message {
-  border: none;
   border-radius: 8px;
   min-height: 40px;
   padding: 10px;
@@ -83,11 +82,39 @@ button[type="submit"] {
   cursor: pointer;
   width: 120px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
+  margin-top: 16px;
 }
 
 button[type="submit"]:hover {
   background-color: #8d8c8c;
   transition: background-color 0.2s ease;
+}
+
+/*===Form Validation styling=====*/
+.form-group {
+  margin-bottom: 9px;
+  position: relative;
+  height: 55px;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+  border: 3px solid #09c372;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border: 3px solid #ff3860;
+}
+
+.form-group .error {
+  color: #ff3860;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold;
 }
