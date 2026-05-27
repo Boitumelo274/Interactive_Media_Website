@@ -10,3 +10,55 @@ body {
   display: grid;
   min-height: 100vh;
 }
+
+main {
+  transform: translateY(-25px);
+  text-align: center;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.first-tagline,
+.second-tagline {
+  font-size: larger;
+}
+
+.favourite-artists-section {
+  transform: translateY(70px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.artist-card {
+  padding: 1rem;
+  background-color: #1c1c1c;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.artist-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.artist-image:hover {
+  border: 2px solid rgb(144, 141, 141);
+}
+
+.artists-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

@@ -29,6 +29,13 @@ body {
 .top-nav {
   height: 5rem;
   background-color: #1c1c1c;
+  align-items: center;
+}
+
+.navigation {
+  height: 5rem;
+  transform: translateY(-12px);
+  width: 100%;
 }
 
 .hero-title-tag {
@@ -50,7 +57,8 @@ body {
 .home {
   display: flex;
   gap: 19rem;
-  margin-top: 12px;
+  margin-top: 17px;
+  height: 5rem;
 }
 
 .image-nav {
@@ -73,9 +81,9 @@ body {
   font-size: 1.1rem;
   margin-left: 2rem;
   padding: 1rem;
-  /* border-radius: 38px; */
   font-weight: 900;
   text-transform: uppercase;
+  transform: translateY(7.9px);
 }
 
 .nav-links {
