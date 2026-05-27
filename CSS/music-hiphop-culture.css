@@ -53,6 +53,7 @@ main {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .artist-image:hover {
@@ -60,6 +61,10 @@ main {
 }
 
 .album-cover:hover {
+  border: 2px solid rgb(144, 141, 141);
+}
+
+.timeline-song-cover:hover {
   border: 2px solid rgb(144, 141, 141);
 }
 
@@ -77,14 +82,19 @@ main {
 
 .albums-section {
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
 .music-influence-timeline {
+  margin-top: 50px;
   margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
 }
 
 .music-cover {

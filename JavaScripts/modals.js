@@ -122,3 +122,82 @@ const generateAlbumCards = (albumCovers) => {
 
 // generating album cover cards with names
 generateAlbumCards(albumCovers);
+
+//Music Influence Timeline array of objects
+const influenceTimelineCovers = [
+  {
+    id: 1,
+    year: 2013,
+    albumName: "The Marshall Mathers LP 2",
+    imageUrl: "../Images/timeline-artist-images/timeline-cover1.png",
+    description: "First Major Influence",
+    imagePlaceHolderText: "Image1",
+  },
+  {
+    id: 2,
+    year: 2014,
+    albumName: "2014 Forest Hills Drive",
+    imageUrl: "../Images/album-cover1.png",
+    description: "Finding Perspective & Identity",
+    imagePlaceHolderText: "Image2",
+  },
+  {
+    id: 3,
+    year: 2018,
+    albumName: "Strings and Bling",
+    imageUrl: "../Images/timeline-artist-images/timeline-cover2.png",
+    description: "African Hip-Hop Pride",
+    imagePlaceHolderText: "Image3",
+  },
+  {
+    id: 4,
+    year: 2022,
+    albumName: "DS4Ever",
+    imageUrl: "../Images/album-cover2.png",
+    description: "Modern Vibe & Melodic Trap Influence",
+    imagePlaceHolderText: "Image4",
+  },
+  {
+    id: 5,
+    year: 2026,
+    albumName: "The Marshall Mathers LP 2",
+    imageUrl: "../Images/timeline-artist-images/timeline-cover3.png",
+    description: "Present Day Influence",
+    imagePlaceHolderText: "Image5",
+  },
+];
+
+const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
+  const musicInfluenceTimelineContainer = document.querySelector(
+    ".music-influence-timeline-container",
+  );
+
+  musicInfluenceTimelineContainer.innerHTML = "";
+
+  influenceTimelineCovers.map((influenceTimelineCover) => {
+    const musicCoverCard = document.createElement("div");
+    musicCoverCard.classList.add("music-cover-card");
+    musicCoverCard.setAttribute("influence-id", influenceTimelineCover.id);
+
+    const year = document.createElement("h3");
+    year.classList.add("year");
+    year.textContent = influenceTimelineCover.year;
+
+    const imageCover = document.createElement("img");
+    imageCover.classList.add("timeline-song-cover");
+    imageCover.src = influenceTimelineCover.imageUrl;
+    imageCover.alt = influenceTimelineCover.imagePlaceHolderText;
+
+    const timelineDescription = document.createElement("h4");
+    timelineDescription.textContent = influenceTimelineCover.description;
+
+    musicCoverCard.appendChild(year);
+    musicCoverCard.appendChild(imageCover);
+    musicCoverCard.appendChild(timelineDescription);
+
+    musicInfluenceTimelineContainer.appendChild(musicCoverCard);
+  });
+};
+
+//Generating music influence timeline cards
+generateMusicInfluenceTimelineCards(influenceTimelineCovers);
