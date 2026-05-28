@@ -131,6 +131,8 @@ const influenceTimelineCovers = [
     albumName: "The Marshall Mathers LP 2",
     imageUrl: "../Images/timeline-artist-images/timeline-cover1.png",
     description: "First Major Influence",
+    influenceDescription:
+      "I started listening to this album in the year 2018. It introduced me to raw lyricism and deep emotional storytelling.",
     imagePlaceHolderText: "Image1",
   },
   {
@@ -139,6 +141,8 @@ const influenceTimelineCovers = [
     albumName: "2014 Forest Hills Drive",
     imageUrl: "../Images/album-cover1.png",
     description: "Finding Perspective & Identity",
+    influenceDescription:
+      "Later on in the same year (2018) after listening to Eminem's album I was introduced to this album. J.Cole's honesty helped me understand growth, maturity, and real-life emotions through Hip-Hop.",
     imagePlaceHolderText: "Image2",
   },
   {
@@ -147,6 +151,8 @@ const influenceTimelineCovers = [
     albumName: "Strings and Bling",
     imageUrl: "../Images/timeline-artist-images/timeline-cover2.png",
     description: "African Hip-Hop Pride",
+    influenceDescription:
+      "Nasty C boosted my confidence and made me connect deeper with African rap culture.",
     imagePlaceHolderText: "Image3",
   },
   {
@@ -155,6 +161,8 @@ const influenceTimelineCovers = [
     albumName: "DS4Ever",
     imageUrl: "../Images/album-cover2.png",
     description: "Modern Vibe & Melodic Trap Influence",
+    influenceDescription:
+      "Gunna's smooth, melodic style shaped the vibe and energy of my current music taste.",
     imagePlaceHolderText: "Image4",
   },
   {
@@ -163,6 +171,8 @@ const influenceTimelineCovers = [
     albumName: "The Marshall Mathers LP 2",
     imageUrl: "../Images/timeline-artist-images/timeline-cover3.png",
     description: "Present Day Influence",
+    influenceDescription:
+      "This one is my favourite album. This era represents how I'm growing with the culture today inspired by maturity, evolution, and lyrical depth.",
     imagePlaceHolderText: "Image5",
   },
 ];
@@ -195,9 +205,54 @@ const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
     musicCoverCard.appendChild(imageCover);
     musicCoverCard.appendChild(timelineDescription);
 
+    musicCoverCard.addEventListener("click", () => {
+      openModal(
+        influenceTimelineCover.imageUrl,
+        influenceTimelineCover.albumName,
+        influenceTimelineCover.influenceDescription,
+      );
+    });
+
     musicInfluenceTimelineContainer.appendChild(musicCoverCard);
   });
 };
 
 //Generating music influence timeline cards
 generateMusicInfluenceTimelineCards(influenceTimelineCovers);
+
+// Get modal elements
+const modal = document.getElementById("modal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const closeBtn = document.getElementById("closeModalBtn");
+
+// Function to open modal
+const openModal = (imageSrc, title, description) => {
+  modalImage.src = imageSrc;
+  modalTitle.textContent = title;
+  modalDescription.textContent = description;
+  modal.style.display = "flex";
+};
+
+// Function to close modal
+const closeModal = () => {
+  modal.style.display = "none";
+};
+
+// Close modal when clicking close button
+closeBtn.addEventListener("click", closeModal);
+
+// Close modal when clicking outside the modal content
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+// Close modal when pressing Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
