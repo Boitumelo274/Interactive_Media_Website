@@ -168,7 +168,7 @@ const influenceTimelineCovers = [
   {
     id: 5,
     year: 2026,
-    albumName: "The Marshall Mathers LP 2",
+    albumName: "The Fall Off",
     imageUrl: "../Images/timeline-artist-images/timeline-cover3.png",
     description: "Present Day Influence",
     influenceDescription:

@@ -14,7 +14,9 @@ body {
 /*=============================================*/
 /*==Contact Form Page Section Styling==========*/
 /*=============================================*/
-
+.contact-container {
+  margin-top: 5rem;
+}
 .contact-image-icon {
   margin-top: 10px;
 }
@@ -27,6 +29,10 @@ p,
 .contact-paragraph,
 .closure {
   font-size: 19px;
+}
+
+.closure {
+  margin-bottom: 3rem;
 }
 
 #contact-form {

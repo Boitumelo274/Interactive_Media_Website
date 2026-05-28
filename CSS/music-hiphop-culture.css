@@ -12,8 +12,11 @@ body {
 }
 
 main {
-  margin-top: 50px;
   text-align: center;
+}
+
+.sections-container {
+  margin-top: 3rem;
 }
 
 .page-heading {
@@ -93,7 +96,7 @@ main {
 
 .music-influence-timeline {
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 120px;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -106,6 +109,8 @@ main {
 
 .music-cover-card {
   margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
 }
 
 /* Modal Styles */
@@ -163,4 +168,45 @@ main {
 
 .modal-close-btn:hover {
   background-color: #5a2d9e;
+}
+
+.music-cover-card::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10.5px;
+  border-style: solid;
+  border-color: transparent transparent #3b1c65 transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.music-cover-card::after {
+  content: "Click to read the influence story";
+  position: absolute;
+  bottom: -49px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3b1c65;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.music-cover-card:hover::before,
+.music-cover-card:hover::after {
+  opacity: 1;
+  visibility: visible;
 }

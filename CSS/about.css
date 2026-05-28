@@ -15,7 +15,7 @@ body {
 /*========About Me Page section Styling=======*/
 /*============================================*/
 .main-section-about {
-  transform: translateY(60px);
+  margin-top: 3rem;
 }
 
 .about-heading {
@@ -75,4 +75,10 @@ body {
 
 #about-footer {
   margin-top: 6rem;
+}
+
+.second-paragraph {
+  border: 2px solid white;
+  padding: 1rem;
+  border-radius: 17px;
 }
