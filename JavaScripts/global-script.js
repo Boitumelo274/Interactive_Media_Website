@@ -21,3 +21,26 @@ navLinks.forEach((link) => {
     link.classList.add("active");
   }
 });
+
+//About Page collapsible content
+
+const childhoodHeader = document.querySelector(".childhood-header");
+const favouritesHeading = document.querySelector(".favourites-heading");
+const secondParagraph = document.querySelector(".second-paragraph");
+const favouriteInfo = document.querySelector(".favourite-info");
+const icon = childhoodHeader.querySelector(".collapse-icon");
+
+childhoodHeader.classList.add("collapsible");
+favouritesHeading.classList.add("collapsible1");
+secondParagraph.classList.add("content");
+favouriteInfo.classList.add("content1");
+
+childhoodHeader.addEventListener("click", () => {
+  childhoodHeader.classList.toggle("active");
+  secondParagraph.classList.toggle("active");
+});
+
+favouritesHeading.addEventListener("click", () => {
+  favouritesHeading.classList.toggle("active");
+  favouriteInfo.classList.toggle("active");
+});
