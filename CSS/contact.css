@@ -89,12 +89,14 @@ button[type="submit"] {
   width: 120px;
   border: none;
   border-radius: 10px;
+  color: #f8f5f0;
   font-size: 1rem;
   margin-top: 16px;
+  background-color: #5a2d9e;
 }
 
 button[type="submit"]:hover {
-  background-color: #8d8c8c;
+  background-color: #3b1c65;
   transition: background-color 0.2s ease;
 }
 

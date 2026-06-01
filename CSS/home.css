@@ -44,10 +44,6 @@ h1 {
   font-size: larger;
 }
 
-.title {
-  cursor: pointer;
-}
-
 main {
   flex: 1;
   overflow-y: auto;
@@ -65,7 +61,7 @@ main {
   height: 5rem;
 }
 
-.image-nav {
+.navigation-container {
   display: flex;
   gap: 1rem;
   margin-left: 19rem;
@@ -83,7 +79,6 @@ main {
 
 .title {
   font-size: 1.1rem;
-  margin-left: 2rem;
   padding: 1rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -107,18 +102,18 @@ main {
   text-decoration: none;
   background-color: transparent;
   padding: 3px;
-  border-radius: 10px;
-  border-bottom: 5px solid transparent;
+  border-bottom: 4px solid transparent;
 }
 
 .nav-links a:hover {
-  border-bottom: 5px solid #3b1c65;
+  color: #825db6;
+  border-bottom: 4px solid #3b1c65;
   transition: background-color 0.2s ease;
 }
 
 .nav-links a.active {
   font-weight: bold;
-  border-bottom: 5px solid #3b1c65;
+  border-bottom: 4px solid #3b1c65;
 }
 
 .introduction {
@@ -126,6 +121,7 @@ main {
   flex-direction: row;
   gap: 2rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .hero-image {
@@ -149,15 +145,14 @@ main {
 
 .extra-info {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
   font-size: larger;
   text-align: center;
-  transform: translateY(-90px);
 }
 
 .extra-info a {
-  color: white;
+  color: #f8f5f0;
 }
 
 .extra-info a:hover {
@@ -168,5 +163,376 @@ main {
   text-align: center;
   margin-top: auto;
   transform: translateY(30px);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+/* Menu Button handling */
+.humburger-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.mobile-menu {
+  position: fixed;
+  transform: translateY(-17px);
+  top: 0;
+  right: -250px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.5rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  background-color: #3b1c65;
+}
+
+.mobile-menu a {
+  color: #f8f5f0;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.mobile-menu a:hover {
+  border: 2px solid #f8f5f0;
+  border-radius: 8px;
+}
+
+.mobile-menu.visible {
+  right: 0;
+}
+
+/* Mobile Styles (600px and below) */
+@media (max-width: 668px) {
+  /* Navigation */
+  .humburger-icon {
+    display: block;
+    color: #f8f5f0;
+  }
+
+  .navigation-container {
+    display: none;
+  }
+
+  .home {
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 0 1rem;
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-left: 0;
+    padding: 0.5rem;
+    transform: translateY(0);
+  }
+
+  .top-nav {
+    height: 4rem;
+  }
+
+  .navigation {
+    height: 4rem;
+    transform: translateY(0);
+  }
+
+  /* Hero Section */
+  .hero-title-tag h1 {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .hero-title-tag {
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  /* Introduction Section */
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-image {
+    height: 300px;
+    width: 300px;
+    margin-left: 0;
+  }
+
+  .intro-paragraph {
+    width: 95%;
+    margin-top: 0;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Main Container */
+  .main-container {
+    margin-top: 1rem;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  /* Extra Info */
+  .extra-info {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Footer */
+  .footer {
+    transform: translateY(0);
+    /* margin-bottom: 10px; */
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Menu Links */
+  .mobile-menu a {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+  }
+
+  .mobile-menu a:hover {
+    background-color: #3b1c65;
+  }
+}
+
+/* Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .hero-image {
+    height: 300px;
+    width: 300px;
+  }
+
+  .mobile-menu a {
+    font-size: medium;
+  }
+
+  .hero-title-tag h1 {
+    font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .intro-paragraph {
+    font-size: 0.8rem;
+  }
+
+  .extra-info {
+    font-size: 0.8rem;
+  }
+
+  .menu-btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-width: 668px) and (orientation: landscape) {
+  .hero-image {
+    height: 150px;
+    width: 150px;
+  }
+
+  .intro-paragraph {
+    width: 80%;
+  }
+
+  .mobile-menu {
+    padding-top: 3rem;
+  }
+
+  .mobile-menu a {
+    padding: 0.8rem;
+  }
+
+  .top-nav {
+    height: 3.5rem;
+  }
+
+  .home {
+    margin-top: 5px;
+  }
+}
+
+/* Desktop (1247px and above) */
+@media (min-width: 1247px) {
+  .home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    gap: 0;
+    margin-top: 17px;
+  }
+
+  .navigation-container {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    gap: 3rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet & Small Desktop (601px to 1246px) */
+@media (min-width: 669px) and (max-width: 1246px) {
+  .home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-left: 0;
+    transform: translateY(0);
+    flex-shrink: 0;
+  }
+
+  .navigation-container {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .top-nav {
+    height: 4.5rem;
+  }
+
+  .navigation {
+    transform: translateY(0);
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .hero-title-tag h1 {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+
+  /* Introduction Section */
+  .introduction {
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-image {
+    height: 300px;
+    width: 300px;
+    margin-left: 2rem;
+  }
+
+  .intro-paragraph {
+    margin-top: 2rem;
+    width: 55%;
+    font-size: 1rem;
+  }
+
+  /* Main Container */
+  .main-container {
+    margin-top: 2rem;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  /* Extra Info */
+  .extra-info {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Footer */
+  .footer {
+    transform: translateY(0);
+    margin-bottom: 15px;
+  }
+
+  /* Mobile menu hidden on tablet */
+  .humburger-icon {
+    display: none;
+  }
+}
+
+/* Small Tablet (601px to 768px) */
+@media (min-width: 669px) and (max-width: 768px) {
+  .home {
+    padding: 0 1rem;
+    margin-top: 0;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .hero-image {
+    height: 298px;
+    width: 298px;
+    margin-left: 1rem;
+  }
+
+  .intro-paragraph {
+    width: 90%;
+  }
+
+  .hero-title-tag h1 {
+    font-size: 1.3rem;
+  }
 }

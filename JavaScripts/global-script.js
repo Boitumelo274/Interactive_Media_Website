@@ -22,25 +22,40 @@ navLinks.forEach((link) => {
   }
 });
 
-//About Page collapsible content
+//MobileMenu
+const menuBtn = document.querySelector(".menu-btn");
+const mobileMenu = document.querySelector("#mobile-menu");
 
+//About Page collapsible content
 const childhoodHeader = document.querySelector(".childhood-header");
 const favouritesHeading = document.querySelector(".favourites-heading");
 const secondParagraph = document.querySelector(".second-paragraph");
 const favouriteInfo = document.querySelector(".favourite-info");
-const icon = childhoodHeader.querySelector(".collapse-icon");
 
-childhoodHeader.classList.add("collapsible");
-favouritesHeading.classList.add("collapsible1");
-secondParagraph.classList.add("content");
-favouriteInfo.classList.add("content1");
+if (childhoodHeader && secondParagraph) {
+  const icon = childhoodHeader.querySelector(".collapse-icon");
 
-childhoodHeader.addEventListener("click", () => {
-  childhoodHeader.classList.toggle("active");
-  secondParagraph.classList.toggle("active");
-});
+  childhoodHeader.classList.add("collapsible");
+  secondParagraph.classList.add("content");
 
-favouritesHeading.addEventListener("click", () => {
-  favouritesHeading.classList.toggle("active");
-  favouriteInfo.classList.toggle("active");
-});
+  childhoodHeader.addEventListener("click", () => {
+    childhoodHeader.classList.toggle("active");
+    secondParagraph.classList.toggle("active");
+  });
+}
+
+if (favouritesHeading && favouriteInfo) {
+  favouritesHeading.classList.add("collapsible1");
+  favouriteInfo.classList.add("content1");
+
+  favouritesHeading.addEventListener("click", () => {
+    favouritesHeading.classList.toggle("active");
+    favouriteInfo.classList.toggle("active");
+  });
+}
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("visible");
+  });
+}
