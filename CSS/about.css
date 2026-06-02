@@ -19,6 +19,7 @@ body {
   position: relative;
   min-height: 100vh;
   padding-bottom: 60px; /* Space for footer */
+  z-index: 1;
 }
 
 .about-heading {
@@ -65,14 +66,15 @@ body {
 .about-introduction {
   display: flex;
   flex-direction: row;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .image-profile {
-  width: 200px;
-  height: 200px;
-  border-radius: 17px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
   border: 3px solid white;
+  box-shadow: 0px 3px 15px #ffff00;
 }
 
 .second-paragraph,
@@ -157,4 +159,245 @@ body {
   right: 0;
   text-align: center;
   padding: 0.5rem;
+}
+
+/* About Page Responsive Styles */
+
+/* Tablet & Small Desktop (669px to 1246px) */
+@media (min-width: 669px) and (max-width: 1246px) {
+  .about-section {
+    padding: 0 100px;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-introduction {
+    flex-direction: row;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .image-profile {
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .first-paragraph,
+  .second-paragraph,
+  .favourite-info {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .collapsible {
+    max-width: 250px;
+  }
+
+  .collapsible1 {
+    max-width: 500px;
+  }
+
+  .collapse-icon {
+    right: -12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .favourites-heading .collapse-icon {
+    right: 3px;
+  }
+}
+
+/* Small Tablet (669px to 768px) */
+@media (min-width: 669px) and (max-width: 768px) {
+  .about-section {
+    padding: 0 50px;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-introduction {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-profile {
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .first-paragraph,
+  .second-paragraph,
+  .favourite-info {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .collapsible {
+    max-width: 220px;
+  }
+
+  .collapsible1 {
+    max-width: 400px;
+  }
+
+  .childhood-header,
+  .favourites-heading {
+    font-size: 1.3rem;
+  }
+
+  .favourites-heading .collapse-icon {
+    right: -15px;
+  }
+}
+
+/* Mobile Styles (668px and below) */
+@media (max-width: 668px) {
+  .main-section-about {
+    margin-top: 1rem;
+    padding-bottom: 80px;
+  }
+
+  .about-section {
+    padding: 0 20px;
+    gap: 1.5rem;
+  }
+
+  .about-heading {
+    font-size: 1.3rem;
+  }
+
+  .about-introduction {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .image-profile {
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .first-paragraph,
+  .second-paragraph,
+  .favourite-info {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .childhood-header,
+  .favourites-heading {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .collapsible {
+    max-width: 200px;
+  }
+
+  .collapsible1 {
+    max-width: 300px;
+  }
+
+  .collapse-icon {
+    right: -15px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .childhood-inspirations,
+  .favourites {
+    transform: translateY(0);
+  }
+
+  .second-paragraph,
+  .favourite-info {
+    padding: 0.8rem;
+  }
+
+  .favourite-info {
+    gap: 0.8rem;
+  }
+}
+
+/* Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .about-section {
+    padding: 0 15px;
+  }
+
+  .about-heading {
+    font-size: 1.1rem;
+  }
+
+  .image-profile {
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .first-paragraph,
+  .second-paragraph,
+  .favourite-info {
+    font-size: 0.85rem;
+  }
+
+  .childhood-header,
+  .favourites-heading {
+    font-size: 1rem;
+  }
+
+  .collapsible {
+    max-width: 180px;
+  }
+
+  .collapsible1 {
+    max-width: 280px;
+  }
+
+  .collapse-icon {
+    right: -15px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-width: 668px) and (orientation: landscape) {
+  .about-section {
+    padding: 0 30px;
+  }
+
+  .image-profile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-introduction {
+    flex-direction: row;
+  }
+
+  .first-paragraph {
+    text-align: left;
+  }
+}
+
+/* Desktop (1247px and above)*/
+@media (min-width: 1247px) {
+  .about-section {
+    padding: 0 210px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
 }

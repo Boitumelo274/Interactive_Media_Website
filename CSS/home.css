@@ -24,12 +24,16 @@ h1 {
   background-color: #1c1c1c;
   align-items: center;
   flex-shrink: 0;
+  position: relative;
+  z-index: 100;
 }
 
 .navigation {
   height: 5rem;
   transform: translateY(-12px);
   width: 100%;
+  position: relative;
+  z-index: 101;
 }
 
 .hero-title-tag {
@@ -59,6 +63,8 @@ main {
   gap: 19rem;
   margin-top: 17px;
   height: 5rem;
+  position: relative;
+  z-index: 102;
 }
 
 .navigation-container {
@@ -111,7 +117,7 @@ main {
   transition: background-color 0.2s ease;
 }
 
-.nav-links a.active {
+.nav-links a.current {
   font-weight: bold;
   border-bottom: 4px solid #3b1c65;
 }
@@ -130,6 +136,7 @@ main {
   margin-left: 5rem;
   border-radius: 700px;
   object-fit: cover;
+  box-shadow: 0px 10px 20px #3b1c65;
 }
 
 .intro-paragraph {
@@ -184,7 +191,7 @@ main {
   flex-direction: column;
   padding-top: 4.5rem;
   transition: right 0.3s ease;
-  z-index: 1000;
+  z-index: 10000;
   background-color: #3b1c65;
 }
 
