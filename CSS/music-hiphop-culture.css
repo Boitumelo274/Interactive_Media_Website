@@ -7,12 +7,14 @@
 body {
   background-color: #0e0e0e;
   color: #f8f5f0;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 main {
   text-align: center;
+  flex: 1;
 }
 
 .sections-container {
@@ -34,6 +36,23 @@ main {
 
 .favourite-artists-section {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.albums-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.music-influence-timeline {
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -86,29 +105,11 @@ main {
   padding: 0 20px;
 }
 
-.albums-section {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.music-influence-timeline {
-  margin-top: 50px;
-  margin-bottom: 120px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  justify-content: center;
-}
-
 .music-cover {
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 .music-cover-card {
-  margin-top: 2rem;
   cursor: pointer;
   position: relative;
 }
@@ -209,4 +210,201 @@ main {
 .music-cover-card:hover::after {
   opacity: 1;
   visibility: visible;
+}
+
+.show-more-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: -20px;
+  transition: transform 0.3s ease;
+}
+
+.show-more-btn.rotate {
+  transform: rotate(180deg);
+}
+
+/* Mobile (668px and below) */
+@media (max-width: 775px) {
+  .sections-container {
+    margin-top: 1rem;
+    padding: 0 15px;
+  }
+
+  .hiphop-heading {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .first-tagline,
+  .second-tagline,
+  .artist-decription,
+  .album-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .favourite-artists-heading,
+  .key-albums,
+  .music-influence-timeline-heading {
+    font-size: 1.1rem;
+  }
+
+  .artists-cards-container,
+  .album-card-container,
+  .music-influence-timeline-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .artist-card,
+  .album-card,
+  .music-cover-card {
+    width: 200px;
+  }
+
+  .artist-image,
+  .album-cover,
+  .timeline-song-cover {
+    height: 200px;
+  }
+
+  .favourite-artists-section,
+  .albums-section,
+  .music-influence-timeline {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+  .music-influence-timeline {
+    margin-bottom: 3rem;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 70%;
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-description {
+    font-size: 1rem;
+  }
+
+  .modal-close-btn {
+    width: 100px;
+  }
+
+  /* Remove hover tooltip on mobile */
+  .music-cover-card::before,
+  .music-cover-card::after {
+    display: none;
+  }
+
+  .show-more-btn {
+    display: block;
+  }
+}
+
+/* Small mobile (462px and below) */
+@media (max-width: 462px) {
+  .first-tagline,
+  .second-tagline,
+  .artist-decription,
+  .album-description {
+    font-size: 0.95rem;
+  }
+
+  .artist-card,
+  .album-card,
+  .music-cover-card {
+    width: 220px;
+  }
+
+  .artist-image,
+  .album-cover,
+  .timeline-song-cover {
+    height: 220px;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+  }
+
+  .artists-cards-container,
+  .album-card-container,
+  .music-influence-timeline-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1.5rem;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 1rem;
+  }
+}
+
+/* Tablet (774px - 1246px) */
+@media (min-width: 774px) and (max-width: 1246px) {
+  .sections-container {
+    margin-top: 2rem;
+    padding: 0 20px;
+  }
+
+  .hiphop-heading {
+    font-size: 1.6rem;
+  }
+
+  .first-tagline,
+  .second-tagline,
+  .artist-decription,
+  .album-description {
+    font-size: 1.05rem;
+  }
+
+  .favourite-artists-heading,
+  .key-albums,
+  .music-influence-timeline-heading {
+    font-size: 1.3rem;
+  }
+
+  .artists-cards-container,
+  .album-card-container,
+  .music-influence-timeline-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1.5rem;
+  }
+
+  .artist-card,
+  .album-card,
+  .music-cover-card {
+    width: 200px;
+  }
+
+  .artist-image,
+  .album-cover,
+  .timeline-song-cover {
+    height: 200px;
+  }
+
+  .modal-content {
+    max-width: 450px;
+  }
 }

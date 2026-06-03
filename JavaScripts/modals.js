@@ -41,7 +41,7 @@ const generatArtistCards = (favouriteArtists) => {
   favouriteArtists.map((favouriteArtist) => {
     const favouriteArtistCard = document.createElement("div");
     favouriteArtistCard.classList.add("artist-card");
-    favouriteArtistCard.setAttribute("artist-card", favouriteArtist.id);
+    favouriteArtistCard.setAttribute("artist-card-id", favouriteArtist.id);
 
     const artistImage = document.createElement("img");
     artistImage.classList.add("artist-image");
@@ -58,8 +58,60 @@ const generatArtistCards = (favouriteArtists) => {
   });
 };
 
-//Calling the generateAtristCards to creat artist cards
+//Call generateAtristCards to create artist cards
 generatArtistCards(favouriteArtists);
+
+// Handling showing more content when clicking a button/dropdown on artist cards
+const artistsButton = document.querySelector(".artists-btn");
+
+let artistsExpanded = false;
+
+artistsButton.addEventListener("click", () => {
+  const artistCards = document.querySelectorAll(".artist-card");
+
+  artistsExpanded = !artistsExpanded;
+
+  artistsButton.classList.toggle("rotate");
+
+  if (artistsExpanded) {
+    artistCards.forEach((card) => {
+      card.style.display = "block";
+    });
+  } else {
+    hideExtraArtists();
+  }
+});
+
+const hideExtraArtists = () => {
+  const artistCards = document.querySelectorAll(".artist-card");
+
+  // Desktop
+  if (window.innerWidth > 775) {
+    artistCards.forEach((card) => {
+      card.style.display = "block";
+    });
+    artistsButton.style.display = "none";
+    return;
+  }
+
+  artistsButton.style.display = "block";
+
+  let cardsToShow = 2;
+
+  if (window.innerWidth <= 462) {
+    cardsToShow = 1;
+  }
+
+  artistCards.forEach((card, index) => {
+    if (index < cardsToShow) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+};
+
+hideExtraArtists();
 
 //Inspirational Albums
 const albumCovers = [
@@ -122,6 +174,59 @@ const generateAlbumCards = (albumCovers) => {
 
 // generating album cover cards with names
 generateAlbumCards(albumCovers);
+
+//Handling showing more content when clicking a button/dropdown on album covers
+const albumsButton = document.querySelector(".albums-btn");
+
+let albumsExpanded = false;
+
+albumsButton.addEventListener("click", () => {
+  const albumCards = document.querySelectorAll(".album-card");
+
+  albumsExpanded = !albumsExpanded;
+
+  albumsButton.classList.toggle("rotate");
+
+  if (albumsExpanded) {
+    albumCards.forEach((card) => {
+      card.style.display = "block";
+    });
+  } else {
+    hideExtraAlbums();
+  }
+});
+
+function hideExtraAlbums() {
+  const albumCards = document.querySelectorAll(".album-card");
+
+  // Desktop
+  if (window.innerWidth > 775) {
+    albumCards.forEach((card) => {
+      card.style.display = "block";
+    });
+
+    albumsButton.style.display = "none";
+    return;
+  }
+
+  albumsButton.style.display = "block";
+
+  let cardsToShow = 2;
+
+  if (window.innerWidth <= 462) {
+    cardsToShow = 1;
+  }
+
+  albumCards.forEach((card, index) => {
+    if (index < cardsToShow) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+hideExtraAlbums();
 
 //Music Influence Timeline array of objects
 const influenceTimelineCovers = [
@@ -219,6 +324,65 @@ const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
 
 //Generating music influence timeline cards
 generateMusicInfluenceTimelineCards(influenceTimelineCovers);
+
+//Handling showing more content when clicking a button/dropdown on timeline influence
+const timelineButton = document.querySelector(".timeline-btn");
+
+let timelineExpanded = false;
+
+timelineButton.addEventListener("click", () => {
+  const timelineCards = document.querySelectorAll(".music-cover-card");
+
+  timelineExpanded = !timelineExpanded;
+
+  timelineButton.classList.toggle("rotate");
+  if (timelineExpanded) {
+    timelineCards.forEach((card) => {
+      card.style.display = "block";
+    });
+  } else {
+    hideExtraTimelineCards();
+  }
+});
+
+function hideExtraTimelineCards() {
+  const timelineCards = document.querySelectorAll(".music-cover-card");
+
+  // Desktop
+  if (window.innerWidth > 775) {
+    timelineCards.forEach((card) => {
+      card.style.display = "block";
+    });
+
+    timelineButton.style.display = "none";
+    return;
+  }
+
+  timelineButton.style.display = "block";
+
+  let cardsToShow = 2;
+
+  if (window.innerWidth <= 462) {
+    cardsToShow = 1;
+  }
+
+  timelineCards.forEach((card, index) => {
+    if (index < cardsToShow) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+hideExtraTimelineCards();
+
+//Handling showing cards at a viewport > 775 px
+window.addEventListener("resize", () => {
+  if (!artistsExpanded) hideExtraArtists();
+  if (!albumsExpanded) hideExtraAlbums();
+  if (!timelineExpanded) hideExtraTimelineCards();
+});
 
 // Get modal elements
 const modal = document.getElementById("modal");

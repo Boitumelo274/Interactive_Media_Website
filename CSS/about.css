@@ -155,11 +155,7 @@ body {
 }
 
 /* About Page Responsive Styles */
-
-/* ========================================= */
 /* Desktop (1247px and above) */
-/* ========================================= */
-
 @media (min-width: 1247px) {
   .about-section {
     max-width: 1200px;
@@ -177,10 +173,7 @@ body {
   }
 }
 
-/* ========================================= */
 /* Tablet & Small Desktop */
-/* ========================================= */
-
 @media (min-width: 769px) and (max-width: 1246px) {
   .about-section {
     padding: 0 50px;
@@ -209,10 +202,7 @@ body {
   }
 }
 
-/* ========================================= */
 /* Small Tablet */
-/* ========================================= */
-
 @media (min-width: 669px) and (max-width: 768px) {
   .about-section {
     padding: 0 30px;
@@ -254,10 +244,7 @@ body {
   }
 }
 
-/* ========================================= */
 /* Mobile */
-/* ========================================= */
-
 @media (max-width: 668px) {
   .main-section-about {
     margin-top: 1rem;
@@ -312,10 +299,7 @@ body {
   }
 }
 
-/* ========================================= */
 /* Very Small Phones */
-/* ========================================= */
-
 @media (max-width: 400px) {
   .about-section {
     padding: 0 15px;
@@ -334,10 +318,7 @@ body {
   }
 }
 
-/* ========================================= */
 /* Mobile Landscape */
-/* ========================================= */
-
 @media (max-width: 668px) and (orientation: landscape) {
   .about-introduction {
     flex-direction: row;
