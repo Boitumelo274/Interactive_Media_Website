@@ -243,14 +243,14 @@ main {
   .second-tagline,
   .artist-decription,
   .album-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0 0.5rem;
   }
 
   .favourite-artists-heading,
   .key-albums,
   .music-influence-timeline-heading {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .artists-cards-container,
@@ -321,7 +321,7 @@ main {
   .second-tagline,
   .artist-decription,
   .album-description {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   .artist-card,
@@ -337,11 +337,11 @@ main {
   }
 
   .modal-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .modal-description {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   .artists-cards-container,
@@ -374,7 +374,7 @@ main {
   .second-tagline,
   .artist-decription,
   .album-description {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .favourite-artists-heading,

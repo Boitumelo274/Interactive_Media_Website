@@ -26,6 +26,10 @@ p,
   text-align: center;
 }
 
+.contact-paragraph {
+  padding: 0px 200px 0px;
+}
+
 .contact-paragraph,
 .closure {
   font-size: 19px;
@@ -139,7 +143,7 @@ button[type="submit"]:hover {
 
   .contact-paragraph,
   .closure {
-    font-size: 1.05rem;
+    font-size: 1rem;
     padding: 0 2rem;
   }
 
@@ -191,7 +195,7 @@ button[type="submit"]:hover {
 
   .contact-paragraph {
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .closure {
@@ -218,7 +222,7 @@ button[type="submit"]:hover {
 
   .contact-paragraph,
   .closure {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0 1rem;
   }
 
@@ -291,7 +295,7 @@ button[type="submit"]:hover {
 
   .contact-paragraph,
   .closure {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   #contact-section {

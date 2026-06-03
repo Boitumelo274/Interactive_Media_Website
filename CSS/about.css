@@ -198,7 +198,7 @@ body {
   .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 }
 
@@ -227,12 +227,12 @@ body {
   .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .childhood-header,
   .favourites-heading {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .collapse-icon {
@@ -276,13 +276,13 @@ body {
   .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
   .childhood-header,
   .favourites-heading {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .collapsible {
@@ -314,7 +314,7 @@ body {
   .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 }
 
