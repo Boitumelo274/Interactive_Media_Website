@@ -7,19 +7,15 @@
 body {
   background-color: #0e0e0e;
   color: #f8f5f0;
-  display: grid;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
 }
 
-/*============================================*/
-/*========About Me Page section Styling=======*/
-/*============================================*/
+/*About Me Page section Styling*/
 .main-section-about {
   margin-top: 3rem;
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 60px; /* Space for footer */
-  z-index: 1;
 }
 
 .about-heading {
@@ -69,10 +65,16 @@ body {
   gap: 1.5rem;
 }
 
+.about-2paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .image-profile {
   width: 250px;
   height: 250px;
-  border-radius: 20px;
+  border-radius: 200px;
   border: 3px solid white;
   box-shadow: 0px 3px 15px #ffff00;
 }
@@ -152,117 +154,113 @@ body {
   visibility: visible;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 0.5rem;
-}
-
 /* About Page Responsive Styles */
 
-/* Tablet & Small Desktop (669px to 1246px) */
-@media (min-width: 669px) and (max-width: 1246px) {
+/* ========================================= */
+/* Desktop (1247px and above) */
+/* ========================================= */
+
+@media (min-width: 1247px) {
   .about-section {
-    padding: 0 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
   }
 
   .about-heading {
-    font-size: 1.8rem;
-  }
-
-  .about-introduction {
-    flex-direction: row;
-    gap: 1.5rem;
-    text-align: center;
+    font-size: 2rem;
   }
 
   .image-profile {
-    border-radius: 200px;
-    width: 200px;
-    height: 200px;
-  }
-
-  .first-paragraph,
-  .second-paragraph,
-  .favourite-info {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .collapsible {
-    max-width: 250px;
-  }
-
-  .collapsible1 {
-    max-width: 500px;
-  }
-
-  .collapse-icon {
-    right: -12px;
-    width: 16px;
-    height: 16px;
-  }
-
-  .favourites-heading .collapse-icon {
-    right: 3px;
+    width: 250px;
+    height: 250px;
   }
 }
 
-/* Small Tablet (669px to 768px) */
-@media (min-width: 669px) and (max-width: 768px) {
+/* ========================================= */
+/* Tablet & Small Desktop */
+/* ========================================= */
+
+@media (min-width: 769px) and (max-width: 1246px) {
   .about-section {
     padding: 0 50px;
   }
 
   .about-heading {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .about-introduction {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    gap: 2rem;
   }
 
   .image-profile {
-    border-radius: 200px;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
   }
 
   .first-paragraph,
+  .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 0.95rem;
-    text-align: center;
+    font-size: 1.05rem;
+  }
+}
+
+/* ========================================= */
+/* Small Tablet */
+/* ========================================= */
+
+@media (min-width: 669px) and (max-width: 768px) {
+  .about-section {
+    padding: 0 30px;
   }
 
-  .collapsible {
-    max-width: 220px;
+  .about-heading {
+    font-size: 1.3rem;
   }
 
-  .collapsible1 {
-    max-width: 400px;
+  .about-introduction {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .image-profile {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+  }
+
+  .first-paragraph,
+  .first-paragraph2,
+  .second-paragraph,
+  .favourite-info {
+    font-size: 1rem;
   }
 
   .childhood-header,
   .favourites-heading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .collapse-icon {
+    right: 29px;
   }
 
   .favourites-heading .collapse-icon {
-    right: -15px;
+    right: 52px;
   }
 }
 
-/* Mobile Styles (668px and below) */
+/* ========================================= */
+/* Mobile */
+/* ========================================= */
+
 @media (max-width: 668px) {
   .main-section-about {
     margin-top: 1rem;
-    padding-bottom: 80px;
   }
 
   .about-section {
@@ -271,7 +269,8 @@ body {
   }
 
   .about-heading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .about-introduction {
@@ -282,122 +281,76 @@ body {
   }
 
   .image-profile {
-    border-radius: 200px;
     width: 200px;
     height: 200px;
   }
 
   .first-paragraph,
+  .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   .childhood-header,
   .favourites-heading {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
   }
 
   .collapsible {
-    max-width: 200px;
+    max-width: 220px;
   }
 
   .collapsible1 {
-    max-width: 300px;
-  }
-
-  .collapse-icon {
-    right: -15px;
-    width: 16px;
-    height: 16px;
+    max-width: 320px;
   }
 
   .childhood-inspirations,
   .favourites {
     transform: translateY(0);
   }
-
-  .second-paragraph,
-  .favourite-info {
-    padding: 0.8rem;
-  }
-
-  .favourite-info {
-    gap: 0.8rem;
-  }
 }
 
-/* Small Mobile (400px and below) */
+/* ========================================= */
+/* Very Small Phones */
+/* ========================================= */
+
 @media (max-width: 400px) {
   .about-section {
     padding: 0 15px;
   }
 
-  .about-heading {
-    font-size: 1.1rem;
-  }
-
   .image-profile {
-    border-radius: 200px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   .first-paragraph,
+  .first-paragraph2,
   .second-paragraph,
   .favourite-info {
-    font-size: 0.85rem;
-  }
-
-  .childhood-header,
-  .favourites-heading {
-    font-size: 1rem;
-  }
-
-  .collapsible {
-    max-width: 180px;
-  }
-
-  .collapsible1 {
-    max-width: 280px;
-  }
-
-  .collapse-icon {
-    right: -15px;
-    width: 14px;
-    height: 14px;
+    font-size: 0.95rem;
   }
 }
 
-/* Landscape Mode for Mobile */
+/* ========================================= */
+/* Mobile Landscape */
+/* ========================================= */
+
 @media (max-width: 668px) and (orientation: landscape) {
-  .about-section {
-    padding: 0 30px;
+  .about-introduction {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .image-profile {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
-  .about-introduction {
-    flex-direction: row;
-  }
-
-  .first-paragraph {
+  .first-paragraph,
+  .first-paragraph2 {
     text-align: left;
-  }
-}
-
-/* Desktop (1247px and above)*/
-@media (min-width: 1247px) {
-  .about-section {
-    padding: 0 210px;
-  }
-
-  .about-heading {
-    font-size: 2rem;
   }
 }

@@ -12,10 +12,8 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-/*========================================/
-/*=====Navigation, Heading and body======*/
-/*=======================================*/
 
+/*Navigation*/
 h1 {
   font-family: sans-serif;
 }
@@ -127,7 +125,6 @@ main {
   flex-direction: row;
   gap: 2rem;
   margin-top: 2rem;
-  justify-content: center;
 }
 
 .hero-image {
@@ -171,6 +168,8 @@ main {
   margin-top: auto;
   transform: translateY(30px);
   margin-bottom: 15px;
+  position: relative;
+  bottom: 0;
 }
 
 /* Menu Button handling */
@@ -232,7 +231,7 @@ main {
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 0;
     padding: 0.5rem;
     transform: translateY(0);
@@ -254,7 +253,7 @@ main {
   }
 
   .tagline {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0 1rem;
   }
 
@@ -280,22 +279,24 @@ main {
   .intro-paragraph {
     width: 95%;
     margin-top: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   /* Main Container */
   .main-container {
     margin-top: 1rem;
+    margin-bottom: 0;
   }
 
   main {
     padding: 15px;
+    min-height: 0;
   }
 
   /* Extra Info */
   .extra-info {
-    font-size: 0.9rem;
+    font-size: 1.01rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
@@ -303,8 +304,11 @@ main {
   /* Footer */
   .footer {
     transform: translateY(0);
-    /* margin-bottom: 10px; */
-    font-size: 0.7rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    position: relative;
+    flex-shrink: 0;
   }
 
   /* Mobile Menu Links */
@@ -330,23 +334,13 @@ main {
   }
 
   .hero-title-tag h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
-  .tagline {
-    font-size: 0.8rem;
-  }
-
-  .title {
-    font-size: 1rem;
-  }
-
-  .intro-paragraph {
-    font-size: 0.8rem;
-  }
-
+  .tagline,
+  .intro-paragraph,
   .extra-info {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
 
   .menu-btn {
@@ -436,11 +430,11 @@ main {
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 1.3rem;
   }
 
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 1rem;
     white-space: nowrap;
   }
 
@@ -460,7 +454,7 @@ main {
   }
 
   .tagline {
-    font-size: 1rem;
+    font-size: 1.05rem;
     padding: 0 2rem;
   }
 
@@ -479,7 +473,7 @@ main {
   .intro-paragraph {
     margin-top: 2rem;
     width: 55%;
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   /* Main Container */
@@ -493,7 +487,7 @@ main {
 
   /* Extra Info */
   .extra-info {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
@@ -501,7 +495,11 @@ main {
   /* Footer */
   .footer {
     transform: translateY(0);
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    position: relative;
+    flex-shrink: 0;
   }
 
   /* Mobile menu hidden on tablet */
@@ -518,25 +516,28 @@ main {
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 1.3rem;
   }
 
   .nav-links a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .hero-image {
-    height: 298px;
-    width: 298px;
+    height: 250px;
+    width: 250px;
     margin-left: 1rem;
   }
 
-  .intro-paragraph {
+  .intro-paragraph,
+  .extra-info,
+  .tagline {
     width: 90%;
+    font-size: 1rem;
   }
 
   .hero-title-tag h1 {

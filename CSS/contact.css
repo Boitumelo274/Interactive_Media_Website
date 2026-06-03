@@ -7,13 +7,13 @@
 body {
   background-color: #0e0e0e;
   color: #f8f5f0;
-  display: grid;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/*=============================================*/
-/*==Contact Form Page Section Styling==========*/
-/*=============================================*/
+/*Contact Form Page Section Styling*/
 .contact-container {
   margin-top: 5rem;
 }
@@ -92,11 +92,11 @@ button[type="submit"] {
   color: #f8f5f0;
   font-size: 1rem;
   margin-top: 16px;
-  background-color: #5a2d9e;
+  background-color: #3b1c65;
 }
 
 button[type="submit"]:hover {
-  background-color: #3b1c65;
+  background-color: #5a2d9e;
   transition: background-color 0.2s ease;
 }
 
@@ -125,4 +125,253 @@ button[type="submit"]:hover {
   height: 18px;
   line-height: 18px;
   font-weight: bold;
+}
+
+/* Tablet & Small Desktop (669px to 1246px) */
+@media (min-width: 669px) and (max-width: 1246px) {
+  .contact-container {
+    margin-top: 3rem;
+  }
+
+  .contact-heading h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-paragraph,
+  .closure {
+    font-size: 1.05rem;
+    padding: 0 2rem;
+  }
+
+  #contact-section {
+    width: 450px;
+    padding: 20px;
+  }
+
+  #input-name,
+  #input-email,
+  #input-message {
+    width: 350px;
+  }
+
+  textarea {
+    width: 350px;
+  }
+}
+
+/* Small Tablet (669px to 768px) */
+@media (min-width: 669px) and (max-width: 768px) {
+  .contact-container {
+    margin-top: 1rem;
+  }
+
+  .contact-heading {
+    transform: translateY(0);
+    margin-top: 1rem;
+  }
+
+  .contact-heading h1 {
+    font-size: 1.3rem;
+  }
+
+  #contact-section {
+    width: 400px;
+    transform: translateY(0);
+  }
+
+  #input-name,
+  #input-email,
+  #input-message {
+    width: 320px;
+  }
+
+  textarea {
+    width: 320px;
+  }
+
+  .contact-paragraph {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .closure {
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile Styles (668px and below) */
+@media (max-width: 668px) {
+  .contact-container {
+    margin-top: 1rem;
+  }
+
+  .contact-heading {
+    transform: translateY(0);
+    margin-top: 1rem;
+    gap: 0.8rem;
+  }
+
+  .contact-heading h1 {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .contact-paragraph,
+  .closure {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .closure {
+    margin-bottom: 2rem;
+  }
+
+  #contact-section {
+    width: 90%;
+    max-width: 350px;
+    transform: translateY(0);
+    padding: 15px;
+  }
+
+  #input-name,
+  #input-email,
+  #input-message {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.9rem;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+  }
+
+  #contact-form {
+    gap: 0.1rem;
+  }
+
+  .form-group {
+    height: auto;
+    margin-bottom: 5px;
+    width: 250px;
+  }
+
+  .form-group .error {
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+  }
+
+  button[type="submit"] {
+    width: 100px;
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-paragraph {
+    margin-bottom: 2rem;
+  }
+
+  .closure {
+    margin-top: 2rem;
+  }
+}
+
+/* Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .contact-heading h1 {
+    font-size: 1.2rem;
+  }
+
+  .contact-paragraph,
+  .closure {
+    font-size: 0.95rem;
+  }
+
+  #contact-section {
+    width: 95%;
+    max-width: 300px;
+    padding: 12px;
+  }
+
+  #input-name,
+  #input-email,
+  #input-message {
+    font-size: 0.85rem;
+    padding: 8px;
+    min-height: 35px;
+  }
+
+  textarea {
+    height: 70px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button[type="submit"] {
+    width: 90px;
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .closure {
+    margin-top: 2rem;
+  }
+
+  .contact-paragraph {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-width: 668px) and (orientation: landscape) {
+  .contact-container {
+    margin-top: 0.5rem;
+  }
+
+  .contact-heading {
+    margin-top: 0.5rem;
+  }
+
+  .contact-heading h1 {
+    font-size: 1.3rem;
+  }
+
+  #contact-section {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .closure {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop (1247px and above)*/
+@media (min-width: 1247px) {
+  .contact-container {
+    margin-top: 5rem;
+  }
+
+  #contact-section {
+    width: 500px;
+  }
+
+  #input-name,
+  #input-email,
+  #input-message {
+    width: 400px;
+  }
+
+  textarea {
+    width: 400px;
+  }
 }
