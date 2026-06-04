@@ -3,10 +3,10 @@ const navigation = document.querySelector("#nav");
 
 navigation.innerHTML = `
  <nav class="nav-links">
-<a href="/index.html">Home</a>
-<a href="/Pages/about.html">About Me</a>
-<a href="/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="/Pages/contact.html">Contact</a></nav>
+<a href="../index.html">Home</a>
+<a href="../Pages/about.html">About Me</a>
+<a href="../Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="../Pages/contact.html">Contact</a></nav>
 `;
 
 //Hover highlight effect for current page
@@ -62,5 +62,46 @@ if (favouritesHeading && favouriteInfo) {
 if (menuBtn) {
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("visible");
+  });
+}
+
+const menuOverlay = document.getElementById("menuOverlay");
+
+const openMenu = () => {
+  mobileMenu.classList.add("visible");
+  if (menuOverlay) menuOverlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+};
+
+const closeMenu = () => {
+  mobileMenu.classList.remove("visible");
+  if (menuOverlay) menuOverlay.classList.remove("active");
+  document.body.style.overflow = "";
+};
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", openMenu);
+}
+
+if (menuOverlay) {
+  menuOverlay.addEventListener("click", closeMenu);
+}
+
+// Close with Escape key
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    mobileMenu &&
+    mobileMenu.classList.contains("visible")
+  ) {
+    closeMenu();
+  }
+});
+
+// Close when clicking a link
+if (mobileMenu) {
+  const menuLinks = mobileMenu.querySelectorAll("a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 }
