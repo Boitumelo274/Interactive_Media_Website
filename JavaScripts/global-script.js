@@ -3,11 +3,11 @@ const navigation = document.querySelector("#nav");
 
 navigation.innerHTML = `
  <nav class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About Me</a>
-<a href="music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="contact.html">Contact</a></nav>
-`;
+<a href="/Interactive_Media_Website/index.html">Home</a>
+<a href="/Interactive_Media_Website/Pages/about.html">About Me</a>
+<a href="/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="/Interactive_Media_Website/Pages/contact.html">Contact</a>
+</nav>`;
 
 //Hover highlight effect for current page
 const currentPage = window.location.pathname.split("/").pop();
