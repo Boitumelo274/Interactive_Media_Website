@@ -362,6 +362,10 @@ main {
     min-height: 0;
   }
 
+  body {
+    overflow: auto;
+  }
+
   /* Extra Info */
   .extra-info {
     font-size: 0.8rem;
