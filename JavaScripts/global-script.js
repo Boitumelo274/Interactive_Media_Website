@@ -3,10 +3,10 @@ const navigation = document.querySelector("#nav");
 
 navigation.innerHTML = `
  <nav class="nav-links">
-<a href="/index.html">Home</a>
-<a href="/Pages/about.html">About Me</a>
-<a href="/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="/Pages/contact.html">Contact</a></nav>
+<a href="index.html">Home</a>
+<a href="Pages/about.html">About Me</a>
+<a href="Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="Pages/contact.html">Contact</a></nav>
 `;
 
 //Hover highlight effect for current page
@@ -25,10 +25,10 @@ const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector("#mobile-menu");
 
 mobileMenu.innerHTML = `
-<a href="/index.html">Home</a>
-<a href="/Pages/about.html">About Me</a>
-<a href="/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="/Pages/contact.html">Contact</a></nav>
+<a href="/Interactive_Media_Exam_Website/index.html">Home</a>
+<a href="/Interactive_Media_Exam_Website/Pages/about.html">About Me</a>
+<a href="/Interactive_Media_Exam_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="/Interactive_Media_Exam_Website/Pages/contact.html">Contact</a></nav>
 `;
 
 //About Page collapsible content
