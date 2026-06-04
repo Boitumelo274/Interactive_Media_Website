@@ -357,6 +357,16 @@ main {
     width: 80%;
     padding: 1rem;
   }
+
+  .hiphop-heading {
+    font-size: 1rem;
+  }
+
+  .favourite-artists-heading,
+  .key-albums,
+  .music-influence-timeline-heading {
+    font-size: 0.9rem;
+  }
 }
 
 /* Tablet (774px - 1246px) */

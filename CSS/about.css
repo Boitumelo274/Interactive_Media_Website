@@ -316,6 +316,15 @@ body {
   .favourite-info {
     font-size: 0.8rem;
   }
+
+  .about-heading {
+    font-size: 1rem;
+  }
+
+  .childhood-header,
+  .favourites-heading {
+    font-size: 0.9rem;
+  }
 }
 
 /* Mobile Landscape */

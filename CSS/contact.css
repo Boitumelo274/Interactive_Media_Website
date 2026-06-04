@@ -290,7 +290,7 @@ button[type="submit"]:hover {
 /* Small Mobile (400px and below) */
 @media (max-width: 400px) {
   .contact-heading h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .contact-paragraph,
