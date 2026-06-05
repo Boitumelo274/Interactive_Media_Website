@@ -25,10 +25,10 @@ const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector("#mobile-menu");
 
 mobileMenu.innerHTML = `
-<a href="/Interactive_Media_Exam_Website/index.html">Home</a>
-<a href="/Interactive_Media_Exam_Website/Pages/about.html">About Me</a>
-<a href="/Interactive_Media_Exam_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="/Interactive_Media_Exam_Website/Pages/contact.html">Contact</a></nav>
+<a href="/Interactive_Media_Website/index.html">Home</a>
+<a href="/Interactive_Media_Website/Pages/about.html">About Me</a>
+<a href="/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="/Interactive_Media_Website/Pages/contact.html">Contact</a>
 `;
 
 //About Page collapsible content
