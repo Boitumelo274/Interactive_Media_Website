@@ -47,7 +47,7 @@ body {
 }
 
 .childhood-header::after {
-  content: "Childhood Music inspirations";
+  content: "Childhood music inspirations";
   position: absolute;
   transform: translateX(40px);
   bottom: -80%;

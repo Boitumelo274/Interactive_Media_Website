@@ -22,6 +22,12 @@ body {
   overflow: hidden;
 }
 
+/*Typing animation styling*/
+.typing-words {
+  /* color: #ffff00; */
+  font-size: 46px;
+}
+
 /* Main heading typography */
 h1 {
   font-size: 2rem;
@@ -354,6 +360,11 @@ main {
   }
 
   /* Hero Section */
+
+  .typing-words {
+    font-size: 1.3rem;
+  }
+
   .hero-title-tag h1 {
     font-size: 1.2rem;
     padding: 0 1rem;
@@ -436,6 +447,10 @@ main {
 
 /* Small Mobile (400px and below) */
 @media (max-width: 400px) {
+  .typing-words {
+    font-size: 1.2rem;
+  }
+
   .hero-image {
     height: 300px;
     width: 300px;
@@ -559,6 +574,10 @@ main {
     width: 100%;
   }
 
+  .typing-words {
+    font-size: 1.7rem;
+  }
+
   /* Hero Section */
   .hero-title-tag h1 {
     font-size: 1.6rem;
@@ -650,6 +669,10 @@ main {
   .tagline {
     width: 90%;
     font-size: 0.8rem;
+  }
+
+  .typing-words {
+    font-size: 1.4rem;
   }
 
   .hero-title-tag h1 {

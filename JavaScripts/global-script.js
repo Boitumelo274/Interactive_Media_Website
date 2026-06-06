@@ -116,3 +116,9 @@ if (mobileMenu) {
     link.addEventListener("click", closeMenu);
   });
 }
+
+//Typing animation
+var typed = new Typed(".typing-words", {
+  strings: ["Welcome to my personal portfolio."],
+  typeSpeed: 98,
+});
