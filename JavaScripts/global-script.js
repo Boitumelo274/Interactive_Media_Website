@@ -109,8 +109,11 @@ if (mobileMenu) {
   });
 }
 
+//Get tying words span class
+const typingWords = document.querySelector(".typing-words");
+
 //Run the typing animation only on the home page
-if (window.location.pathname.includes("index.html")) {
+if (typingWords) {
   var typed = new Typed(".typing-words", {
     strings: ["Welcome to my personal portfolio."],
     typeSpeed: 80,
