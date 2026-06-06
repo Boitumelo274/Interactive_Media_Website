@@ -321,6 +321,10 @@ body {
     display: none;
   }
 
+  .favourites-heading::after {
+    display: none;
+  }
+
   .main-section-about {
     margin-top: 1rem;
   }
