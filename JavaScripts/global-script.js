@@ -109,8 +109,13 @@ if (mobileMenu) {
   });
 }
 
-//Typing animation
-var typed = new Typed(".typing-words", {
-  strings: ["Welcome to my personal portfolio."],
-  typeSpeed: 80,
-});
+//Typing animation only run on the home page
+if (
+  window.location.pathname.includes("index.html") ||
+  window.location.pathname("/")
+) {
+  var typed = new Typed(".typing-words", {
+    strings: ["Welcome to my personal portfolio."],
+    typeSpeed: 80,
+  });
+}
