@@ -1,12 +1,15 @@
+/* Reset all default browser margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* Set base font size for rem units */
 html {
   font-size: 100%;
 }
 
+/* Body layout as flex column with dark theme */
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -19,12 +22,14 @@ body {
   overflow: hidden;
 }
 
+/* Main heading typography */
 h1 {
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
+/* Top navigation bar styling */
 .top-nav {
   height: 5rem;
   background-color: #1c1c1c;
@@ -34,6 +39,7 @@ h1 {
   z-index: 100;
 }
 
+/* Navigation wrapper with upward transform */
 .navigation {
   height: 5rem;
   transform: translateY(-12px);
@@ -42,6 +48,7 @@ h1 {
   z-index: 101;
 }
 
+/* Hero title and tagline container */
 .hero-title-tag {
   text-align: center;
   margin-top: 1rem;
@@ -50,20 +57,24 @@ h1 {
   gap: 15px;
 }
 
+/* Tagline text size */
 .tagline {
   font-size: larger;
 }
 
+/* Main content area - scrollable */
 main {
   flex: 1;
   overflow-y: auto;
   padding: 20px;
 }
 
+/* Main container top margin */
 .main-container {
   margin-top: 3rem;
 }
 
+/* Home section flex layout */
 .home {
   display: flex;
   gap: 19rem;
@@ -73,12 +84,14 @@ main {
   z-index: 102;
 }
 
+/* Navigation container spacing */
 .navigation-container {
   display: flex;
   gap: 1rem;
   margin-left: 19rem;
 }
 
+/* Icon images styling */
 .home-image-icon,
 .contact-image-icon,
 .music-image-icon,
@@ -89,6 +102,7 @@ main {
   border-radius: 8px;
 }
 
+/* Website title/brand styling */
 .title {
   font-size: 1.1rem;
   padding: 1rem;
@@ -97,6 +111,7 @@ main {
   transform: translateY(7.9px);
 }
 
+/* Navigation links container */
 .nav-links {
   display: flex;
   gap: 4rem;
@@ -106,6 +121,7 @@ main {
   justify-content: center;
 }
 
+/* Navigation link styling */
 .nav-links a {
   color: #f8f5f0;
   font-size: 1.1rem;
@@ -117,16 +133,19 @@ main {
   border-bottom: 4px solid transparent;
 }
 
+/* Navigation link hover effect */
 .nav-links a:hover {
   color: #825db6;
   transition: background-color 0.2s ease;
 }
 
+/* Active/current page link styling */
 .nav-links a.current {
   font-weight: bold;
   border-bottom: 4px solid #3b1c65;
 }
 
+/* Introduction section flex row layout */
 .introduction {
   display: flex;
   flex-direction: row;
@@ -134,6 +153,7 @@ main {
   margin-top: 2rem;
 }
 
+/* Hero image styling */
 .hero-image {
   height: 400px;
   width: 420px;
@@ -143,6 +163,7 @@ main {
   box-shadow: 0px 10px 20px #3b1c65;
 }
 
+/* Intro paragraph styling */
 .intro-paragraph {
   margin-top: 5rem;
   padding: 0.1rem;
@@ -154,6 +175,7 @@ main {
   gap: 1rem;
 }
 
+/* Extra info section styling */
 .extra-info {
   text-align: center;
   margin-top: 1rem;
@@ -162,14 +184,17 @@ main {
   text-align: center;
 }
 
+/* Extra info link color */
 .extra-info a {
   color: #f8f5f0;
 }
 
+/* Extra info link hover effect */
 .extra-info a:hover {
   color: #ffff00;
 }
 
+/* Footer styling */
 .footer {
   text-align: center;
   margin-top: auto;
@@ -179,7 +204,7 @@ main {
   bottom: 0;
 }
 
-/* Menu Button handling */
+/* Menu Button handling - hidden by default */
 .humburger-icon {
   display: none;
   font-size: 2rem;
@@ -187,6 +212,7 @@ main {
   margin-right: 1rem;
 }
 
+/* Mobile menu panel - fixed position */
 .mobile-menu {
   position: fixed;
   transform: translateY(-17px);
@@ -201,6 +227,7 @@ main {
   background-color: #3b1c65;
 }
 
+/* Mobile menu links styling */
 .mobile-menu a {
   color: #f8f5f0;
   text-decoration: none;
@@ -208,18 +235,20 @@ main {
   opacity: 0;
 }
 
+/* Mobile menu link hover effect */
 .mobile-menu a:hover {
   border: 2px solid #f8f5f0;
   border-radius: 8px;
 }
 
+/* Visible state for mobile menu */
 .mobile-menu.visible {
   display: flex;
   animation: fadeIn 0.3s ease forwards;
   right: 0;
 }
 
-/* Simple fade in animation */
+/*Fade in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -229,7 +258,7 @@ main {
   }
 }
 
-/* Add overlay */
+/* Add overlay - dark background behind menu */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -242,15 +271,18 @@ main {
   display: none;
 }
 
+/* Active state for menu overlay */
 .menu-overlay.active {
   display: block;
   animation: fadeIn 0.3s ease forwards;
 }
 
+/* Fade in animation for menu links */
 .mobile-menu.visible a {
   animation: fadeInLink 0.3s ease forwards;
 }
 
+/* Keyframes for link fade in with slide */
 @keyframes fadeInLink {
   from {
     opacity: 0;
@@ -262,32 +294,37 @@ main {
   }
 }
 
-/* Stagger the links */
+/* Stagger the links - first link */
 .mobile-menu.visible a:nth-child(1) {
   animation-delay: 0.05s;
 }
+/* Stagger the links - second link */
 .mobile-menu.visible a:nth-child(2) {
   animation-delay: 0.1s;
 }
+/* Stagger the links - third link */
 .mobile-menu.visible a:nth-child(3) {
   animation-delay: 0.15s;
 }
+/* Stagger the links - fourth link */
 .mobile-menu.visible a:nth-child(4) {
   animation-delay: 0.2s;
 }
 
 /* Mobile Styles (600px and below) */
 @media (max-width: 668px) {
-  /* Navigation */
+  /* Navigation - show hamburger icon */
   .humburger-icon {
     display: block;
     color: #f8f5f0;
   }
 
+  /* Hide desktop navigation */
   .navigation-container {
     display: none;
   }
 
+  /* Home flex layout for mobile */
   .home {
     justify-content: space-between;
     align-items: center;
@@ -297,6 +334,7 @@ main {
     height: 100%;
   }
 
+  /* Title font size on mobile */
   .title {
     font-size: 1rem;
     margin-left: 0;
@@ -304,10 +342,12 @@ main {
     transform: translateY(0);
   }
 
+  /* Smaller nav bar on mobile */
   .top-nav {
     height: 4rem;
   }
 
+  /* Reset navigation transform */
   .navigation {
     height: 4rem;
     transform: translateY(0);
@@ -329,7 +369,7 @@ main {
     gap: 10px;
   }
 
-  /* Introduction Section */
+  /* Introduction Section - column layout */
   .introduction {
     flex-direction: column;
     align-items: center;
@@ -361,6 +401,7 @@ main {
     min-height: 0;
   }
 
+  /* Allow body to scroll */
   body {
     overflow: auto;
   }

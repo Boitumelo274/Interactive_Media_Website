@@ -1,9 +1,11 @@
+/* Reset all default browser margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body layout as flex column with dark theme */
 body {
   background-color: #0e0e0e;
   color: #f8f5f0;
@@ -14,37 +16,45 @@ body {
 }
 
 /*Contact Form Page Section Styling*/
+/* Contact container top margin */
 .contact-container {
   margin-top: 5rem;
 }
+/* Contact icon top spacing */
 .contact-image-icon {
   margin-top: 10px;
 }
 
+/* Center align paragraphs and headings */
 p,
 .contact-heading {
   text-align: center;
 }
 
+/* Contact paragraph horizontal padding */
 .contact-paragraph {
   padding: 0px 200px 0px;
 }
 
+/* Text size for contact paragraph and closure */
 .contact-paragraph,
 .closure {
   font-size: 17px;
 }
 
+/* Bottom margin for closure text */
 .closure {
   margin-bottom: 3rem;
 }
 
+/* Contact form vertical spacing */
 #contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
+/* Contact heading with upward transform */
 .contact-heading {
   transform: translateY(-40px);
   display: flex;
@@ -53,10 +63,12 @@ p,
   margin-top: 2.5rem;
 }
 
+/* Section heading bottom margin */
 h2 {
   margin-bottom: 1rem;
 }
 
+/* Contact section card styling */
 #contact-section {
   transform: translateY(-17px);
   background-color: #2c2c2c;
@@ -69,6 +81,7 @@ h2 {
   align-items: center;
 }
 
+/* Form input fields styling */
 #input-name,
 #input-email,
 #input-message {
@@ -80,12 +93,14 @@ h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Textarea specific styling */
 textarea {
   width: 200px;
   height: 80px;
   resize: none;
 }
 
+/* Submit button styling */
 button[type="submit"] {
   align-self: center;
   padding: 10px;
@@ -99,28 +114,33 @@ button[type="submit"] {
   background-color: #3b1c65;
 }
 
+/* Submit button hover effect */
 button[type="submit"]:hover {
   background-color: #5a2d9e;
   transition: background-color 0.2s ease;
 }
 
 /*===Form Validation styling=====*/
+/* Form group container for validation */
 .form-group {
   margin-bottom: 9px;
   position: relative;
   height: 55px;
 }
 
+/* Success state border color */
 .form-group.success input,
 .form-group.success textarea {
   border: 3px solid #09c372;
 }
 
+/* Error state border color */
 .form-group.error input,
 .form-group.error textarea {
   border: 3px solid #ff3860;
 }
 
+/* Error message text styling */
 .form-group .error {
   color: #ff3860;
   font-size: 14px;
@@ -132,6 +152,7 @@ button[type="submit"]:hover {
 }
 
 /* Tablet & Small Desktop (669px to 1246px) */
+/* Responsive adjustments for tablets */
 @media (min-width: 669px) and (max-width: 1246px) {
   .contact-container {
     margin-top: 3rem;
@@ -164,6 +185,7 @@ button[type="submit"]:hover {
 }
 
 /* Small Tablet (669px to 768px) */
+/* Responsive adjustments for small tablets */
 @media (min-width: 669px) and (max-width: 768px) {
   .contact-container {
     margin-top: 1rem;
@@ -205,6 +227,7 @@ button[type="submit"]:hover {
 }
 
 /* Mobile Styles (668px and below) */
+/* Responsive adjustments for mobile phones */
 @media (max-width: 668px) {
   .contact-container {
     margin-top: 1rem;
@@ -289,6 +312,7 @@ button[type="submit"]:hover {
 }
 
 /* Small Mobile (400px and below) */
+/* Responsive adjustments for small mobile devices */
 @media (max-width: 400px) {
   .contact-heading h1 {
     font-size: 1rem;
@@ -337,6 +361,7 @@ button[type="submit"]:hover {
 }
 
 /* Landscape Mode for Mobile */
+/* Adjustments for landscape orientation on mobile */
 @media (max-width: 668px) and (orientation: landscape) {
   .contact-container {
     margin-top: 0.5rem;
@@ -361,6 +386,7 @@ button[type="submit"]:hover {
 }
 
 /* Desktop (1247px and above)*/
+/* Default styling for large desktop screens */
 @media (min-width: 1247px) {
   .contact-container {
     margin-top: 5rem;

@@ -1,7 +1,7 @@
 // Form Validation Script
 // Handles client-side validation for contact form
 
-//Get DOM elements
+//Get form elements
 const form = document.getElementById("contact-form");
 const name = document.getElementById("input-name");
 const email = document.getElementById("input-email");

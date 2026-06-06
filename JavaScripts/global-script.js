@@ -1,12 +1,20 @@
 //JavaScript Navigation for each page
 const navigation = document.querySelector("#nav");
 
+// navigation.innerHTML = `
+//  <nav class="nav-links">
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
+// </nav>`;
+
 navigation.innerHTML = `
  <nav class="nav-links">
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
+<a href="../index.html">Home</a>
+<a href="../Pages/about.html">About Me</a>
+<a href="../Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="../Pages/contact.html">Contact</a>
 </nav>`;
 
 //Hover highlight effect for current page
@@ -31,12 +39,13 @@ mobileMenu.innerHTML = `
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
 `;
 
-//About Page collapsible content
+//Get About Page collapsible content
 const childhoodHeader = document.querySelector(".childhood-header");
 const favouritesHeading = document.querySelector(".favourites-heading");
 const secondParagraph = document.querySelector(".second-paragraph");
 const favouriteInfo = document.querySelector(".favourite-info");
 
+//Hide and show content when clicking each header icon
 if (childhoodHeader && secondParagraph) {
   const icon = childhoodHeader.querySelector(".collapse-icon");
 
@@ -59,12 +68,14 @@ if (favouritesHeading && favouriteInfo) {
   });
 }
 
+//Hide the menu button/icon after clicking
 if (menuBtn) {
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("visible");
   });
 }
 
+//Get an element to handle the backgroud visibily / opacity when the menu button is clicked.
 const menuOverlay = document.getElementById("menuOverlay");
 
 const openMenu = () => {

@@ -1,43 +1,46 @@
 // Cards and modals
-//Arrays of artists object
+//Arrays of artists objects
 const favouriteArtists = [
   {
     id: 1,
     name: "J.Cole",
     imageUrl: "../Images/timeline-artist-images/J.Cole.png",
-    imagePlaceHolderText: "Image1",
+    imagePlaceHolderText: "Artist-Image1",
   },
   {
     id: 2,
     name: "Kendrick Lamar",
     imageUrl: "../Images/timeline-artist-images/Kendrick.png",
-    imagePlaceHolderText: "Image2",
+    imagePlaceHolderText: "Artist-Image2",
   },
   {
     id: 3,
     name: "Big Sean",
     imageUrl: "../Images/timeline-artist-images/BigSean.png",
-    imagePlaceHolderText: "Image3",
+    imagePlaceHolderText: "Artist-Image3",
   },
   {
     id: 4,
     name: "Logic",
     imageUrl: "../Images/timeline-artist-images/Logic.png",
-    imagePlaceHolderText: "Image4",
+    imagePlaceHolderText: "Artist-Image4",
   },
   {
     id: 5,
     name: "Nipsey Hussle",
     imageUrl: "../Images/timeline-artist-images/Nipsey.png",
-    imagePlaceHolderText: "Image5",
+    imagePlaceHolderText: "Artist-Image5",
   },
 ];
 
+//Generate artists cards
 const generatArtistCards = (favouriteArtists) => {
+  // Get a card container
   const cardContainer = document.querySelector(".artists-cards-container");
 
   cardContainer.innerHTML = "";
 
+  // Looping through the favouriteArtists array to create a single card for each.
   favouriteArtists.map((favouriteArtist) => {
     const favouriteArtistCard = document.createElement("div");
     favouriteArtistCard.classList.add("artist-card");
@@ -66,6 +69,7 @@ const artistsButton = document.querySelector(".artists-btn");
 
 let artistsExpanded = false;
 
+// Dropdown click event for displaying an extension of favourite artists cards on mobile and small tablets
 artistsButton.addEventListener("click", () => {
   const artistCards = document.querySelectorAll(".artist-card");
 
@@ -83,6 +87,7 @@ artistsButton.addEventListener("click", () => {
 });
 
 const hideExtraArtists = () => {
+  // Get all artist cards
   const artistCards = document.querySelectorAll(".artist-card");
 
   // Desktop
@@ -111,47 +116,50 @@ const hideExtraArtists = () => {
   });
 };
 
+// Function calls for hiding extra cards on smaller devices.
 hideExtraArtists();
 
-//Inspirational Albums
+// Inspirational albums array of objects
 const albumCovers = [
   {
     id: 1,
     albumName: "2014 Forest Hills Drive-J.Cole",
     imageUrl: "../Images/album-cover1.png",
-    imagePlaceHolderText: "Image1",
+    imagePlaceHolderText: "Image-cover1",
   },
   {
     id: 2,
     albumName: "DS4Ever-Gunna",
     imageUrl: "../Images/album-cover2.png",
-    imagePlaceHolderText: "Image2",
+    imagePlaceHolderText: "Image-cover2",
   },
   {
     id: 3,
     albumName: "So Much Fun-Young Thug",
     imageUrl: "../Images/album-cover3.png",
-    imagePlaceHolderText: "Image3",
+    imagePlaceHolderText: "Image-cover3",
   },
   {
     id: 4,
     albumName: "The Forever Story-JID",
     imageUrl: "../Images/album-cover4.png",
-    imagePlaceHolderText: "Image4",
+    imagePlaceHolderText: "Image-cover4",
   },
   {
     id: 5,
     albumName: "Scorpion-Drake",
     imageUrl: "../Images/album-cover5.png",
-    imagePlaceHolderText: "Image5",
+    imagePlaceHolderText: "Image-cover5",
   },
 ];
 
+// Generating cards for album covers
 const generateAlbumCards = (albumCovers) => {
   const albumContainer = document.querySelector(".album-card-container");
 
   albumContainer.innerHTML = "";
 
+  // Looping through the albumCovers array to create a single card for each.
   albumCovers.map((albumCover) => {
     const albumCard = document.createElement("div");
     albumCard.classList.add("album-card");
@@ -196,7 +204,7 @@ albumsButton.addEventListener("click", () => {
   }
 });
 
-function hideExtraAlbums() {
+const hideExtraAlbums = () => {
   const albumCards = document.querySelectorAll(".album-card");
 
   // Desktop
@@ -224,11 +232,11 @@ function hideExtraAlbums() {
       card.style.display = "none";
     }
   });
-}
+};
 
 hideExtraAlbums();
 
-//Music Influence Timeline array of objects
+// Music Influence Timeline array of objects
 const influenceTimelineCovers = [
   {
     id: 1,
@@ -282,6 +290,7 @@ const influenceTimelineCovers = [
   },
 ];
 
+// Generating music influence cards
 const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
   const musicInfluenceTimelineContainer = document.querySelector(
     ".music-influence-timeline-container",
@@ -289,6 +298,7 @@ const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
 
   musicInfluenceTimelineContainer.innerHTML = "";
 
+  // Looping through the influenceTimelineCovers array to create a single card for each.
   influenceTimelineCovers.map((influenceTimelineCover) => {
     const musicCoverCard = document.createElement("div");
     musicCoverCard.classList.add("music-cover-card");
@@ -310,6 +320,7 @@ const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
     musicCoverCard.appendChild(imageCover);
     musicCoverCard.appendChild(timelineDescription);
 
+    // A click event on the music influence cards to open modals
     musicCoverCard.addEventListener("click", () => {
       openModal(
         influenceTimelineCover.imageUrl,
@@ -322,10 +333,10 @@ const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
   });
 };
 
-//Generating music influence timeline cards
+// Generating music influence timeline cards
 generateMusicInfluenceTimelineCards(influenceTimelineCovers);
 
-//Handling showing more content when clicking a button/dropdown on timeline influence
+// Handling showing more content when clicking a button/dropdown on timeline influence
 const timelineButton = document.querySelector(".timeline-btn");
 
 let timelineExpanded = false;
@@ -345,7 +356,8 @@ timelineButton.addEventListener("click", () => {
   }
 });
 
-function hideExtraTimelineCards() {
+const hideExtraTimelineCards = () => {
+  // Get all music timeline cards
   const timelineCards = document.querySelectorAll(".music-cover-card");
 
   // Desktop
@@ -373,18 +385,19 @@ function hideExtraTimelineCards() {
       card.style.display = "none";
     }
   });
-}
+};
 
+// Hide extra cards on small devices
 hideExtraTimelineCards();
 
-//Handling showing cards at a viewport > 775 px
+// Handling showing cards at a viewport > 775 px
 window.addEventListener("resize", () => {
   if (!artistsExpanded) hideExtraArtists();
   if (!albumsExpanded) hideExtraAlbums();
   if (!timelineExpanded) hideExtraTimelineCards();
 });
 
-// Get modal elements
+// Get modal elements by Id
 const modal = document.getElementById("modal");
 const modalImage = document.getElementById("modalImage");
 const modalTitle = document.getElementById("modalTitle");

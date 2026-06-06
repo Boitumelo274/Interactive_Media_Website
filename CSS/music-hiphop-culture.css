@@ -1,9 +1,11 @@
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Main body layout and colors */
 body {
   background-color: #0e0e0e;
   color: #f8f5f0;
@@ -12,21 +14,25 @@ body {
   min-height: 100vh;
 }
 
+/* Main content area takes remaining space */
 main {
   text-align: center;
   flex: 1;
 }
 
+/* Container for all sections with top spacing */
 .sections-container {
   margin-top: 3rem;
 }
 
+/* Page heading stacked vertically */
 .page-heading {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Text styling for taglines and descriptions */
 .first-tagline,
 .second-tagline,
 .artist-decription,
@@ -34,6 +40,7 @@ main {
   font-size: larger;
 }
 
+/* Favorite artists section layout */
 .favourite-artists-section {
   margin-top: 50px;
   display: flex;
@@ -42,6 +49,7 @@ main {
   justify-content: center;
 }
 
+/* Albums section layout */
 .albums-section {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -50,6 +58,7 @@ main {
   gap: 2rem;
 }
 
+/* Music timeline section layout */
 .music-influence-timeline {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -59,6 +68,7 @@ main {
   justify-content: center;
 }
 
+/* Card styling for artists, albums, and music */
 .artist-card,
 .album-card,
 .music-cover-card {
@@ -69,6 +79,7 @@ main {
   border-radius: 12px;
 }
 
+/* Image styling inside cards */
 .artist-image,
 .album-cover,
 .timeline-song-cover {
@@ -77,22 +88,28 @@ main {
   object-fit: cover;
 }
 
+/* Hover effect for artist images */
 .artist-image:hover {
   border: 2px solid rgb(144, 141, 141);
 }
 
+/* Hover effect for album covers */
 .album-cover:hover {
   border: 2px solid rgb(144, 141, 141);
 }
 
+/* Hover effect for timeline images */
 .timeline-song-cover:hover {
   border: 2px solid rgb(144, 141, 141);
 }
 
+/* Timeline image spacing and cursor */
 .timeline-song-cover {
   margin-top: 12px;
   cursor: pointer;
 }
+
+/* Card containers using flexbox for wrapping */
 .artists-cards-container,
 .album-card-container,
 .music-influence-timeline-container {
@@ -105,16 +122,18 @@ main {
   padding: 0 20px;
 }
 
+/* Music cover additional spacing */
 .music-cover {
   margin-top: 17px;
 }
 
+/* Music card cursor and positioning */
 .music-cover-card {
   cursor: pointer;
   position: relative;
 }
 
-/* Modal Styles */
+/* Modal Styles - Hidden by default */
 .modal {
   display: none;
   position: fixed;
@@ -129,6 +148,7 @@ main {
   align-items: center;
 }
 
+/* Modal content box styling */
 .modal-content {
   background-color: #1c1c1c;
   padding: 2rem;
@@ -138,6 +158,7 @@ main {
   text-align: center;
 }
 
+/* Modal image sizing */
 .modal-image {
   width: 100%;
   height: auto;
@@ -145,18 +166,21 @@ main {
   margin-bottom: 1rem;
 }
 
+/* Modal title styling */
 .modal-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #f8f5f0;
 }
 
+/* Modal description text */
 .modal-description {
   font-size: larger;
   margin-bottom: 1.5rem;
   color: #ccc;
 }
 
+/* Modal close button */
 .modal-close-btn {
   background-color: #3b1c65;
   color: white;
@@ -167,10 +191,12 @@ main {
   font-size: 1rem;
 }
 
+/* Modal close button hover effect */
 .modal-close-btn:hover {
   background-color: #5a2d9e;
 }
 
+/* Tooltip arrow for music cards */
 .music-cover-card::before {
   content: "";
   position: absolute;
@@ -187,10 +213,11 @@ main {
   z-index: 11;
 }
 
+/* Tooltip text for music cards */
 .music-cover-card::after {
   content: "Click to read the influence story";
   position: absolute;
-  bottom: -49px;
+  bottom: -54px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #3b1c65;
@@ -206,12 +233,14 @@ main {
   z-index: 10;
 }
 
+/* Show tooltip on hover */
 .music-cover-card:hover::before,
 .music-cover-card:hover::after {
   opacity: 1;
   visibility: visible;
 }
 
+/* Show more button for mobile */
 .show-more-btn {
   display: none;
   cursor: pointer;
@@ -223,11 +252,12 @@ main {
   transition: transform 0.3s ease;
 }
 
+/* Rotate effect for show more button */
 .show-more-btn.rotate {
   transform: rotate(180deg);
 }
 
-/* Mobile (668px and below) */
+/* Mobile (668px and below) - Responsive layout for phones */
 @media (max-width: 775px) {
   .sections-container {
     margin-top: 1rem;
@@ -253,6 +283,7 @@ main {
     font-size: 1rem;
   }
 
+  /* Grid layout for mobile cards */
   .artists-cards-container,
   .album-card-container,
   .music-influence-timeline-container {
@@ -315,7 +346,7 @@ main {
   }
 }
 
-/* Small mobile (462px and below) */
+/* Small mobile (462px and below) - Single column layout */
 @media (max-width: 462px) {
   .first-tagline,
   .second-tagline,
@@ -344,6 +375,7 @@ main {
     font-size: 0.8rem;
   }
 
+  /* Single column grid for very small screens */
   .artists-cards-container,
   .album-card-container,
   .music-influence-timeline-container {
@@ -369,7 +401,7 @@ main {
   }
 }
 
-/* Tablet (774px - 1246px) */
+/* Tablet (774px - 1246px) - 3 column layout for tablets */
 @media (min-width: 774px) and (max-width: 1246px) {
   .sections-container {
     margin-top: 2rem;
@@ -393,6 +425,7 @@ main {
     font-size: 1.3rem;
   }
 
+  /* Three column grid for tablets */
   .artists-cards-container,
   .album-card-container,
   .music-influence-timeline-container {
