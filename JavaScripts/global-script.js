@@ -112,7 +112,7 @@ if (mobileMenu) {
 //Run the typing animation only on the home page
 if (
   window.location.pathname.includes("index.html") ||
-  window.location.pathname("/")
+  window.location.pathname === "/"
 ) {
   var typed = new Typed(".typing-words", {
     strings: ["Welcome to my personal portfolio."],
