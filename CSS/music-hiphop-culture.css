@@ -257,7 +257,7 @@ main {
   transform: rotate(180deg);
 }
 
-/* Mobile (668px and below) - Responsive layout for phones */
+/* Mobile (775px and below) - Responsive layout for phones */
 @media (max-width: 775px) {
   .sections-container {
     margin-top: 1rem;
