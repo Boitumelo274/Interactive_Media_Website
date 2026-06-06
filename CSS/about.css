@@ -46,6 +46,52 @@ body {
   transform: translateY(-20px);
 }
 
+.childhood-header::after {
+  content: "Childhood Music inspirations";
+  position: absolute;
+  transform: translateX(40px);
+  bottom: -80%;
+  background-color: #3b1c65;
+  color: white;
+  padding: 8px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.favourites-heading::after {
+  content: "Context on my favourite artists, influence and albums";
+  position: absolute;
+  transform: translateX(40px);
+  bottom: -80%;
+  background-color: #3b1c65;
+  color: white;
+  padding: 9px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.favourites-heading:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.childhood-header:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Favourite info section vertical spacing */
 .favourite-info {
   display: flex;

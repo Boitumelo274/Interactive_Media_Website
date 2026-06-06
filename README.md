@@ -41,7 +41,7 @@ MeloCreates is a personal portfolio website showcasing the influence of Hip-Hop 
 ## Technologies Used
 
 - **HTML5** - Semantic structure
-- **CSS3** - Custom styling, responsive design, animations
+- **CSS3** - Custom styling, responsive design, animations on mobile menu
 - **JavaScript** - Dynamic content generation, form validation, modal functionality
 - **Font Awesome** - Icons for navigation mobile menu
 - **Google Fonts** - Inter and Montserrat Fonts
