@@ -109,7 +109,7 @@ if (mobileMenu) {
   });
 }
 
-//Typing animation only run on the home page
+//Run the typing animation only on the home page
 if (
   window.location.pathname.includes("index.html") ||
   window.location.pathname("/")
