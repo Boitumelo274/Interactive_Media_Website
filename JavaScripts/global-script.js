@@ -1,12 +1,20 @@
 //JavaScript Navigation for each page
 const navigation = document.querySelector("#nav");
 
+// navigation.innerHTML = `
+//  <nav class="nav-links">
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+// <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
+// </nav>`;
+
 navigation.innerHTML = `
  <nav class="nav-links">
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
+<a href="../index.html">Home</a>
+<a href="../Pages/about.html">About Me</a>
+<a href="../Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
+<a href="../Pages/contact.html">Contact</a>
 </nav>`;
 
 //Hover highlight effect for current page
@@ -112,5 +120,5 @@ if (mobileMenu) {
 //Typing animation
 var typed = new Typed(".typing-words", {
   strings: ["Welcome to my personal portfolio."],
-  typeSpeed: 98,
+  typeSpeed: 80,
 });
