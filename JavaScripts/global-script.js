@@ -25,6 +25,7 @@ const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector("#mobile-menu");
 
 mobileMenu.innerHTML = `
+<div class="menu-header">Menu</div>
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>

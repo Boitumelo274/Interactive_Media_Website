@@ -24,8 +24,12 @@ body {
 
 /*Typing animation styling*/
 .typing-words {
-  /* color: #ffff00; */
   font-size: 46px;
+}
+
+.typed-cursor {
+  font-size: 3rem;
+  color: #3b1c65;
 }
 
 /* Main heading typography */
@@ -210,7 +214,7 @@ main {
   bottom: 0;
 }
 
-/* Menu Button handling - hidden by default */
+/* Menu Button handling */
 .humburger-icon {
   display: none;
   font-size: 2rem;
@@ -227,10 +231,16 @@ main {
   width: 250px;
   display: none;
   flex-direction: column;
-  padding-top: 4.5rem;
+  padding-top: 3rem;
   transition: right 0.3s ease;
   z-index: 10000;
   background-color: #3b1c65;
+}
+
+.menu-header {
+  align-self: center;
+  transform: translateY(-3px);
+  font-size: 1rem;
 }
 
 /* Mobile menu links styling */
@@ -323,6 +333,11 @@ main {
   .humburger-icon {
     display: block;
     color: #f8f5f0;
+  }
+
+  /*Typed cursor styping*/
+  .typed-cursor {
+    font-size: 1.2rem;
   }
 
   /* Hide desktop navigation */
@@ -447,6 +462,50 @@ main {
 
 /* Small Mobile (400px and below) */
 @media (max-width: 400px) {
+  /*Tooltip arrow for menu icon*/
+  .humburger-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 36%;
+    left: 82%;
+    transform: translateX(-50%);
+    transform: rotate(90deg);
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #3b1c65 transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease;
+    pointer-events: none;
+    z-index: 11;
+  }
+
+  /*Tooltip for menu icon*/
+  .humburger-icon::after {
+    content: "Open Menu";
+    position: absolute;
+    transform: translateX(-120px);
+    bottom: 20%;
+    background-color: #3b1c65;
+    color: white;
+    padding: 8px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /*Show tooltip on hover*/
+  .humburger-icon:hover:before,
+  .humburger-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .typing-words {
     font-size: 1.2rem;
   }
@@ -534,6 +593,10 @@ main {
 
 /* Tablet & Small Desktop (601px to 1246px) */
 @media (min-width: 669px) and (max-width: 1246px) {
+  .typed-cursor {
+    font-size: 1.8rem;
+  }
+
   .home {
     display: flex;
     justify-content: space-between;
@@ -644,6 +707,10 @@ main {
   .home {
     padding: 0 1rem;
     margin-top: 0;
+  }
+
+  .typed-cursor {
+    font-size: 1.8rem;
   }
 
   .nav-links {
