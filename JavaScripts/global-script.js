@@ -9,7 +9,7 @@ navigation.innerHTML = `
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
 </nav>`;
 
-//Hover highlight effect for current page
+//Current page state handling on desktop and smaller tablets
 const currentPage = window.location.pathname.split("/").pop();
 const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -31,6 +31,16 @@ mobileMenu.innerHTML = `
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
 <a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
 `;
+
+//Current page state handling on mobile menu
+const menuLinks = document.querySelectorAll(".mobile-menu a");
+
+menuLinks.forEach((link) => {
+  const menuLinkPage = link.getAttribute("href").split("/").pop();
+  if (menuLinkPage === currentPage) {
+    link.classList.add("current-link");
+  }
+});
 
 //Get About Page collapsible content
 const childhoodHeader = document.querySelector(".childhood-header");
