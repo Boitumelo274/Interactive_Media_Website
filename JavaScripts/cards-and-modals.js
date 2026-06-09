@@ -41,10 +41,18 @@ const generatArtistCards = (favouriteArtists) => {
   cardContainer.innerHTML = "";
 
   // Looping through the favouriteArtists array to create a single card for each.
-  favouriteArtists.map((favouriteArtist) => {
+  favouriteArtists.map((favouriteArtist, index) => {
     const favouriteArtistCard = document.createElement("div");
     favouriteArtistCard.classList.add("artist-card");
     favouriteArtistCard.setAttribute("artist-card-id", favouriteArtist.id);
+
+    //Adding animation based on index
+    if (index % 2 === 0) {
+      favouriteArtistCard.style.animationName = "slideInFromLeft";
+    } else {
+      favouriteArtistCard.style.animationName = "slideInFromRight";
+    }
+    favouriteArtistCard.style.animationDelay = index * 0.1 + "s";
 
     const artistImage = document.createElement("img");
     artistImage.classList.add("artist-image");
@@ -160,10 +168,18 @@ const generateAlbumCards = (albumCovers) => {
   albumContainer.innerHTML = "";
 
   // Looping through the albumCovers array to create a single card for each.
-  albumCovers.map((albumCover) => {
+  albumCovers.map((albumCover, index) => {
     const albumCard = document.createElement("div");
     albumCard.classList.add("album-card");
     albumCard.setAttribute("album-cover-data-id", albumCover.id);
+
+    // Add animation
+    if (index % 2 === 0) {
+      albumCard.style.animation = "slideInFromLeft 0.5s forwards";
+    } else {
+      albumCard.style.animation = "slideInFromRight 0.5s forwards";
+    }
+    albumCard.style.animationDelay = index * 0.1 + "s";
 
     const albumCoverImage = document.createElement("img");
     albumCoverImage.classList.add("album-cover");
@@ -299,10 +315,18 @@ const generateMusicInfluenceTimelineCards = (influenceTimelineCovers) => {
   musicInfluenceTimelineContainer.innerHTML = "";
 
   // Looping through the influenceTimelineCovers array to create a single card for each.
-  influenceTimelineCovers.map((influenceTimelineCover) => {
+  influenceTimelineCovers.map((influenceTimelineCover, index) => {
     const musicCoverCard = document.createElement("div");
     musicCoverCard.classList.add("music-cover-card");
     musicCoverCard.setAttribute("influence-id", influenceTimelineCover.id);
+
+    // Add animation
+    if (index % 2 === 0) {
+      musicCoverCard.style.animation = "slideInFromLeft 0.5s forwards";
+    } else {
+      musicCoverCard.style.animation = "slideInFromRight 0.5s forwards";
+    }
+    musicCoverCard.style.animationDelay = index * 0.1 + "s";
 
     const year = document.createElement("h3");
     year.classList.add("year");
@@ -433,3 +457,91 @@ document.addEventListener("keydown", (event) => {
     closeModal();
   }
 });
+
+// Double click like interaction for all cards
+const likeCards = document.querySelectorAll(
+  ".artist-card, .album-card, .music-cover-card",
+);
+
+// Create notification badge
+const badge = document.createElement("div");
+badge.className = "like-badge";
+badge.innerHTML = '<span class="heart">❤️</span><span>Liked!</span>';
+document.body.appendChild(badge);
+
+const showBadge = (message) => {
+  badge.innerHTML = '<span class="heart">❤️</span><span>' + message + "</span>";
+  badge.classList.add("show");
+  setTimeout(() => {
+    badge.classList.remove("show");
+  }, 1500);
+};
+
+// Load saved likes
+let likedItems = JSON.parse(localStorage.getItem("likedItems") || "[]");
+
+// Add heart to each card and set initial state
+for (let i = 0; i < likeCards.length; i++) {
+  const card = likeCards[i];
+
+  // Get card name
+  let cardName = "this item";
+  let cardNameElement = card.querySelector("h3");
+  if (cardNameElement) {
+    cardName = cardNameElement.textContent;
+  }
+
+  // Add heart element
+  const heart = document.createElement("div");
+  heart.className = "liked-heart";
+  heart.innerHTML = "❤️";
+  card.appendChild(heart);
+
+  // Check if liked before
+  let isLiked = false;
+  for (let j = 0; j < likedItems.length; j++) {
+    if (likedItems[j] === cardName) {
+      isLiked = true;
+      break;
+    }
+  }
+
+  if (isLiked) {
+    card.classList.add("has-liked");
+  }
+
+  // Add double-click event
+  card.addEventListener("dblclick", (e) => {
+    e.stopPropagation();
+
+    // Get card name again
+    let cardName = "this item";
+    let cardNameElement = card.querySelector("h3");
+    if (cardNameElement) {
+      cardName = cardNameElement.textContent;
+    }
+
+    // Toggle like
+    if (card.classList.contains("has-liked")) {
+      card.classList.remove("has-liked");
+
+      // Remove from likedItems
+      let newLikedItems = [];
+      for (let j = 0; j < likedItems.length; j++) {
+        if (likedItems[j] !== cardName) {
+          newLikedItems.push(likedItems[j]);
+        }
+      }
+      likedItems = newLikedItems;
+
+      showBadge("Unliked");
+    } else {
+      card.classList.add("has-liked");
+      likedItems.push(cardName);
+      showBadge("Liked!");
+    }
+
+    // Save to localStorage
+    localStorage.setItem("likedItems", JSON.stringify(likedItems));
+  });
+}
