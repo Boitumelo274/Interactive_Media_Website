@@ -2,19 +2,52 @@
 const navigation = document.querySelector("#nav");
 
 navigation.innerHTML = `
- <nav class="nav-links">
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
-</nav>`;
+<nav class="nav-links">
+    <a href="#" data-page="index.html" onclick="goHome()">Home</a>
+    <a href="#" data-page="about.html" onclick="goAbout()">About Me</a>
+    <a href="#" data-page="music-hiphop-culture.html" onclick="goMusic()">Music & Hip-Hop Culture</a>
+    <a href="#" data-page="contact.html" onclick="goContact()">Contact</a>
+</nav>
+`;
+
+const goHome = () => {
+  if (window.location.pathname.includes("/Pages/")) {
+    window.location.href = "../index.html";
+  } else {
+    window.location.href = "index.html";
+  }
+};
+
+const goAbout = () => {
+  if (window.location.pathname.includes("/Pages/")) {
+    window.location.href = "about.html";
+  } else {
+    window.location.href = "Pages/about.html";
+  }
+};
+
+const goMusic = () => {
+  if (window.location.pathname.includes("/Pages/")) {
+    window.location.href = "music-hiphop-culture.html";
+  } else {
+    window.location.href = "Pages/music-hiphop-culture.html";
+  }
+};
+
+const goContact = () => {
+  if (window.location.pathname.includes("/Pages/")) {
+    window.location.href = "contact.html";
+  } else {
+    window.location.href = "Pages/contact.html";
+  }
+};
 
 //Current page state handling on desktop and smaller tablets
 const currentPage = window.location.pathname.split("/").pop();
 const navLinks = document.querySelectorAll(".nav-links a");
 
 navLinks.forEach((link) => {
-  const linkPage = link.getAttribute("href").split("/").pop();
+  const linkPage = link.dataset.page;
   if (linkPage === currentPage) {
     link.classList.add("current");
   }
@@ -26,17 +59,17 @@ const mobileMenu = document.querySelector("#mobile-menu");
 
 mobileMenu.innerHTML = `
 <div class="menu-header">Menu</div>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/index.html">Home</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/about.html">About Me</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/music-hiphop-culture.html">Music & Hip-Hop Culture</a>
-<a href="https://boitumelo274.github.io/Interactive_Media_Website/Pages/contact.html">Contact</a>
+<a href="#" data-page="index.html" onclick="goHome()">Home</a>
+    <a href="#" data-page="about.html" onclick="goAbout()">About Me</a>
+    <a href="#" data-page="music-hiphop-culture.html" onclick="goMusic()">Music & Hip-Hop Culture</a>
+    <a href="#" data-page="contact.html" onclick="goContact()">Contact</a>
 `;
 
 //Current page state handling on mobile menu
 const menuLinks = document.querySelectorAll(".mobile-menu a");
 
 menuLinks.forEach((link) => {
-  const menuLinkPage = link.getAttribute("href").split("/").pop();
+  const menuLinkPage = link.dataset.page;
   if (menuLinkPage === currentPage) {
     link.classList.add("current-link");
   }
