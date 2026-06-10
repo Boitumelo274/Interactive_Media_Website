@@ -59,6 +59,7 @@ MeloCreates is a personal portfolio website showcasing the influence of Hip-Hop 
 
 - Collapsible content sections on About page
 - Modal popups for timeline cards
+- Like heart appears when double tap
 - Form validation with visual feedback
 - Hover effects on cards and links
 - Mobile menu with overlay and blur effect
