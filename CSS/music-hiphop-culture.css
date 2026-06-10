@@ -224,9 +224,27 @@ main {
 }
 
 /*Like promp detail tooltip*/
-.artist-card::after,
+.artist-card::after {
+  content: "Double tap if you like the artist";
+  position: absolute;
+  bottom: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3b1c65;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
 .album-card::after {
-  content: "Double tap to like";
+  content: "Double tap if you like/know the album";
   position: absolute;
   bottom: -42px;
   left: 50%;
